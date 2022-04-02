@@ -4,7 +4,7 @@
 
 ![kalbounyan_banner](banner.jpeg)
 
-# About Kalbonyan Elmarsos
+## About Kalbonyan Elmarsos
 
  Kalbonyan Elmarsos is an Egyptian non-profit organization whose goal is to help students become better developers and be able to deal and succeed with the global labor market and compete in it with strength and efficiency.
 
@@ -12,7 +12,9 @@
 
  </div>
 
+> ℹ  Most changes made in this repo are inspired by previous cohort student [Ahmed Samir](https://github.com/ahmedsamirdev).
 ### The Aim of this internship
+
 - <a href="#Fundamentals">Learn Programing Fundamentals ,HTMl and CSS </a>
 - <a href="#MERN">Learn MERN Stack</a>
 - <a href="#AWS">Learn How to Deploy your web applications with Cloud Provider (AWS)</a>
@@ -22,6 +24,8 @@
 <br>
 
 > Note click on the name of the course to see its repository that contains projects, challenges and certificates
+
+
 
 - - - -
 <!-- Fundamentals -->
