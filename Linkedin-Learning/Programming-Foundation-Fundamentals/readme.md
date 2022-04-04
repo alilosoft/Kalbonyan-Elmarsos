@@ -4,8 +4,7 @@
 
 ## [Notes](https://alilo.notion.site/Notes-535f412dfa654a3cb4d4fcb0fc5c50f9)
 
-//TODO@fellahi-ali #4 add certificate when finished
-## [Preview Certificate]()
+## [Preview Certificate](https://www.linkedin.com/learning/certificates/2cdcafa9d8452e4806059fd03311c51eeb73a6a5bbb2809a4b7d964df9517297?trk=share_certificate)
 
 ## Course details
 
