@@ -1,10 +1,8 @@
 # Programming Foundation-Fundamentals
 
-<div align=center>
-
-| [Course Link](https://www.linkedin.com/learning/programming-foundations-fundamentals-3/) | [My Notes](https://alilo.notion.site/Programing-Foundation-Fundamentals-9bff0a4c1259429bba2e030ded7cba85) | [Preview Certificate](https://www.linkedin.com/learning/certificates/2cdcafa9d8452e4806059fd03311c51eeb73a6a5bbb2809a4b7d964df9517297?trk=share_certificate) |
-| ------ | ------------------------ | -------------- |
-</div>
+- [**Course Link**](https://www.linkedin.com/learning/programming-foundations-fundamentals-3/)
+- [**My Notes**](https://alilo.notion.site/Programing-Foundation-Fundamentals-9bff0a4c1259429bba2e030ded7cba85)
+- [**Preview Certificate**](https://www.linkedin.com/learning/certificates/2cdcafa9d8452e4806059fd03311c51eeb73a6a5bbb2809a4b7d964df9517297?trk=share_certificate)
 
 ## Course details
 
