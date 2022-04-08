@@ -1,7 +1,17 @@
 # Programming Foundations: Object-Oriented Design
-### Course details
-- All good software starts with a great design. Object-oriented design helps developers plan applications before they write a single line of code, and break down ideas into reusable and maintainable components. This course focuses on the foundational concepts, teaching them in a fun, interactive way to help you quickly develop your skills. Tag team Olivia and Barron Stone introduce you to the concepts and terms—objects, classes, abstraction, inheritance, and more—that you need to get started. They then show how to take the requirements for an app, identify use cases, and map out classes using Universal Modeling Language (UML). The final design can then be translated into code using one of the many popular object-oriented programming languages, such as Java, C#, Ruby, or Python.
+
+- [**Course Link**](https://www.linkedin.com/learning/programming-foundations-object-oriented-design-3/)
+
+- [**My Notes**](https://alilo.notion.site/Programming-Foundations-Object-Oriented-Design-d8c2ab259e844e89900ed47a1581ecc0)
+
+- [**Preview Certificate**](https://www.linkedin.com/learning/certificates/800a3f211bd749d85112757e34a197d12fbf8d59ffe679b4f5fe762b25acdbec?trk=share_certificate)
+
+## Course details
+
+> All good software starts with a great design. Object-oriented design helps developers plan applications before they write a single line of code, and break down ideas into reusable and maintainable components. This course focuses on the foundational concepts, teaching them in a fun, interactive way to help you quickly develop your skills. Tag team Olivia and Barron Stone introduce you to the concepts and terms—objects, classes, abstraction, inheritance, and more—that you need to get started. They then show how to take the requirements for an app, identify use cases, and map out classes using Universal Modeling Language (UML). The final design can then be translated into code using one of the many popular object-oriented programming languages, such as Java, C#, Ruby, or Python.
+
 ### Learning objectives
+
 - Object-oriented basics: objects, classes, and more
 - Encapsulation
 - Inheritance
@@ -13,6 +23,3 @@
 - Using abstract classes
 - Working with inheritance
 - Developing software with object-oriented design principles
--------------------------------
-[Course Link](https://www.linkedin.com/learning/programming-foundations-object-oriented-design-3/)
-<br>[Preview Certificate]()
