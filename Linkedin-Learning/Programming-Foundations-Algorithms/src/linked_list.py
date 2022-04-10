@@ -47,17 +47,15 @@ class LinkedList(object):
         if idx < 0 or idx > self.count-1:
             return
         
-        if idx == 0:
+        if (idx == 0):
             self.head = self.head.get_next()
         else:
-            temp_idx = 1
-            previous = self.head
-            current = self.head.get_next()
-            while temp_idx != idx:
+            temp_idx = 0
+            current = self.head
+            while (temp_idx < idx - 1):
                 temp_idx += 1
-                previous = current
                 current = current.get_next()
-            previous.set_next(current.get_next())
+            current.set_next(current.get_next().get_next())
         
         self.count -= 1
 
