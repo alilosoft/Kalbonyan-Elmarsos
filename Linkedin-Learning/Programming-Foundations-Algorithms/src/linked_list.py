@@ -29,6 +29,7 @@ class LinkedList(object):
     def get_count(self):
         return self.count
 
+    # O(1)
     def insert(self, data):
         new_node = Node(data)
         new_node.set_next(self.head)
@@ -37,12 +38,14 @@ class LinkedList(object):
 
 
 
+    # O(n)
     def find(self, val):
         # TODO: find the first item with a given value
         item = self.head
 
         return None
 
+    # O(n)
     def deleteAt(self, idx):
         if idx < 0 or idx > self.count-1:
             return
