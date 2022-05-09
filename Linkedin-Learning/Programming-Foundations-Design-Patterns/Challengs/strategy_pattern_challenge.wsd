@@ -1,0 +1,25 @@
+@startuml
+interface ShareMedia
+ShareMedia : share()
+
+Text ..> ShareMedia
+Email ..> ShareMedia
+Social ..> ShareMedia
+
+abstract PhoneCamera
+PhoneCamera o-- ShareMedia
+PhoneCamera : ShareMedia shareMedium
+PhoneCamera : take()
+PhoneCamera : edit()
+PhoneCamera : save()
+PhoneCamera : share()
+
+class BasicCameraApp
+BasicCameraApp : edit()
+
+class CameraPlusApp
+CameraPlusApp : edit()
+
+PhoneCamera <|-- BasicCameraApp
+PhoneCamera <|-- CameraPlusApp
+@enduml
