@@ -4,18 +4,16 @@ interface Pizza
 Pizza : description()
 Pizza : cost()
 
-Pizza <|-- ThinCrustPizza
-Pizza <|-- ThickCrustPizza
+Pizza <|.. ThinCrustPizza
+Pizza <|.. ThickCrustPizza
 
-interface Topping
-Pizza <|-- Topping 
+abstract Topping
+Pizza <|.. Topping
+Pizza o-- Topping
+Topping : Pizza decorated
 
 Topping <|-- Cheese
 Topping <|-- Olive
 Topping <|-- Peppers
-
-Cheese o-- Pizza
-Olive o-- Pizza
-Peppers o-- Pizza
 
 @enduml
