@@ -1,0 +1,21 @@
+@startuml adapter_pattern
+
+interface Pizza
+Pizza : description()
+Pizza : cost()
+
+Pizza <|-- ThinCrustPizza
+Pizza <|-- ThickCrustPizza
+
+interface Topping
+Pizza <|-- Topping 
+
+Topping <|-- Cheese
+Topping <|-- Olive
+Topping <|-- Peppers
+
+Cheese o-- Pizza
+Olive o-- Pizza
+Peppers o-- Pizza
+
+@enduml
