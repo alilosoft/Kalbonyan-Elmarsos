@@ -1,0 +1,31 @@
+@startuml observer_pattern
+
+interface WeatherObserver
+WeatherObserver : update(temp, wind, pressure)
+
+GUI ..|> WeatherObserver
+Logger ..|> WeatherObserver
+AlertSystem ..|> WeatherObserver
+
+GUI o-- LocalWeatherStation
+Logger o-- LocalWeatherStation
+AlertSystem o-- LocalWeatherStation
+
+GUI : WeatherStation station
+Logger : WeatherStation station
+AlertSystem : WeatherStation station
+
+interface WeatherStation
+WeatherStation : register(WeatherObserver o)
+WeatherStation : remove(WeatherObserver o)
+WeatherStation : notifyObservers()
+
+LocalWeatherStation --|> WeatherStation
+LocalWeatherStation : temperature
+LocalWeatherStation : windSpeed
+LocalWeatherStation : presure
+LocalWeatherStation : WeatherObserver observers
+ 
+WeatherStation "1" ---o "*" WeatherObserver
+
+@enduml
