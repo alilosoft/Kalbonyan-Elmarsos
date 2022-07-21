@@ -2,5 +2,4 @@
 # O(log(n))
 def find_item(item, items):
     pass
-    # todo: #12 implement search algo in ordered list using binnary search
     
