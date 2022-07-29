@@ -1,9 +1,9 @@
 # Build Responsive Real-World Websites with HTML and CSS
 
-## Section 3 | Challenge #1 Solution
+## Section 3 | Challenge #1
 
-### See code on: [Github](../02-Challenges)
+### See code on: [CodePen](https://codepen.io/alilosoft/pen/BarmEWb) | [Github](../02-Challenges)
 
-### Result:
+### _Final Result:_
 
 ![Result](screenshot.jpg)
