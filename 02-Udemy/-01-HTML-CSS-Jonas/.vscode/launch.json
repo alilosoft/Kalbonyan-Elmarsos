@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "type": "pwa-chrome",
+      "name": "http://127.0.0.1:3000/Code/02-HTML-Fundamentals/index.html",
+      "request": "launch",
+      "url": "http://127.0.0.1:3000/Code/02-HTML-Fundamentals/index.html"
+    },
+    {
+      "type": "pwa-chrome",
+      "name": "http://127.0.0.1:3000/Code/03-CSS-Fundamentals/index.html",
+      "request": "launch",
+      "url": "http://127.0.0.1:3000/Code/03-CSS-Fundamentals/index.html"
+    }
+  ]
+}
