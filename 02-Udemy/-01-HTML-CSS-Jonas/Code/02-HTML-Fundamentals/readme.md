@@ -4,4 +4,4 @@
 
 ### _Final Result_
 
-![Result](screenshot.gif)
+![Result](screenshot.png)
