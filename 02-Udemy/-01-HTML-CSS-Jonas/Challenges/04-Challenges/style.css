@@ -23,7 +23,7 @@ body {
   letter-spacing: 2px;
   color: #fff;
   background-color: #e33;
-  padding: 8px 18px;
+  padding: 7px 14px;
   display: inline-block;
   top: -20px;
   left: -40px;
@@ -74,32 +74,32 @@ body {
 
 .colors li:nth-child(1) {
   background-color: #000;
+  height: 24px;
   width: 24px;
-  margin-left: 0;
 }
 .colors li:nth-child(2) {
-  color: #3d40ec;
   background-color: #3d40ec;
+  height: 24px;
   width: 24px;
 }
 .colors li:nth-child(3) {
-  color: #e34f4f;
   background-color: #e34f4f;
+  height: 24px;
   width: 24px;
 }
 .colors li:nth-child(4) {
-  color: #e8a23f;
   background-color: #e8a23f;
+  height: 24px;
   width: 24px;
 }
 .colors li:nth-child(5) {
-  color: #82bd4f;
   background-color: #82bd4f;
+  height: 24px;
   width: 24px;
 }
 .colors li:nth-child(6) {
-  color: #b67c10;
   background-color: #b67c10;
+  height: 24px;
   width: 24px;
 }
 /* product details */
