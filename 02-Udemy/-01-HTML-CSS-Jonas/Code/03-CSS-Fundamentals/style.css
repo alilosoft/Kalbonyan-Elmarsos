@@ -12,9 +12,9 @@ body {
 }
 
 .container {
-  width: 600px;
+  width: 825px;
   margin: 0 auto;
-  /* position: relative; */
+  position: relative;
 }
 
 h1,
@@ -203,8 +203,8 @@ a:active {
   border: none;
   padding: 16px;
   position: absolute;
-  bottom: 24px;
-  right: 24px;
+  bottom: 48px;
+  right: 4px;
 }
 
 .like-btn:hover {
