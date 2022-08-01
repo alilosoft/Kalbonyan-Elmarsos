@@ -1,13 +1,7 @@
 # Build Responsive Real-World Websites with HTML and CSS
 
-### _Section 01 | **My First Web Page**_ [{ code }](01-My-First-Web-Page/index.html)
+### ✔ Section 01 | [_**My First Web Page**_ ](01-My-First-Web-Page)
 
-![Result](01-My-First-Web-Page/screenshot.jpg)
+### ✔ Section 02 | [_**HTML Fundamentals**_](02-HTML-Fundamentals/)
 
-### _Section 02 | **HTML Fundamentals**_ [{ code }](02-HTML-Fundamentals/)
-
-![Result](02-HTML-Fundamentals/screenshot.gif)
-
-### _Section 03 | **CSS Fundamentals**_ [{ code }](03-CSS-Fundamentals/)
-
-![Result](03-CSS-Fundamentals/screenshot.gif)
+### ✔ Section 03 | [_**CSS Fundamentals**_](03-CSS-Fundamentals/)
