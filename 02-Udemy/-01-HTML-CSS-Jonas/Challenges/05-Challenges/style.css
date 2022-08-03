@@ -141,7 +141,8 @@ body {
 /* FLOAT LAYOUT */
 .prod-img {
   float: left;
-  /* width: 33%; */
+  width: 33%;
+  height: auto;
 }
 
 .info {
@@ -152,9 +153,10 @@ body {
 }
 
 .details {
-  float: right;
+  float: left;
   width: 33%;
   padding-top: 28px;
+  padding-left: 40px;
 }
 
 .price {
