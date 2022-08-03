@@ -1,0 +1,261 @@
+/* the universal selector, it will apply for all elements */
+* {
+  box-sizing: border-box;
+  /* text-align: center; */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+  position: relative;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #449;
+}
+
+article {
+  margin-bottom: 48px;
+}
+
+.main-header {
+  font-family: monospace;
+  background-color: #eee;
+  border-bottom: 8px solid #449;
+  padding: 12px 24px;
+  margin-bottom: 48px;
+}
+
+/* pseudo elements */
+h1::first-letter {
+  font-size: 36px;
+}
+
+h3 + p::first-letter {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* p + ul::first-line,
+ol::first-letter {
+  color: red;
+} */
+h2 {
+  position: relative;
+}
+
+h2::after {
+  content: "TOP";
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  background-color: #deff26;
+  padding: 8px;
+  position: absolute;
+  top: -16px;
+  right: -20px;
+}
+
+nav {
+  font-size: 18px;
+  text-align: center;
+  /* height: 24px; */
+}
+
+nav a:link {
+  margin: 0px 10px;
+  padding-top: 18px;
+  display: inline-block;
+}
+
+aside {
+  background-color: #eee;
+  border-left: 6px solid #449;
+  padding: 36px 24px;
+  /* width: 480px; */
+}
+
+.post-header {
+  margin-bottom: 28px;
+  /* position: relative; */
+}
+
+/* post title */
+h2 {
+  font-size: 36px;
+  margin-bottom: 32px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-top: 36px;
+  margin-bottom: 16px;
+}
+
+h4 {
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+ol,
+ul {
+  margin-left: 48px;
+  margin-bottom: 18px;
+}
+
+li {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+li:last-child {
+  /* we don't need to specify unit for zero values */
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 32px;
+  text-transform: lowercase;
+}
+
+/* avoid using descendant selector, use id or class instead */
+/* header p {
+  font-style: italic;
+  font-size: medium;
+} */
+
+#author {
+  font-size: 16px;
+  font-style: italic;
+}
+
+#copyright {
+  font-size: 14px;
+  text-align: end;
+}
+
+.related-author {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.related-posts {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+article p:last-child {
+  font-style: italic;
+}
+
+/* styling links */
+a:link {
+  color: #449;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #449;
+}
+
+a:hover {
+  color: brown;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #00dd00;
+  background-color: #333;
+}
+/* end styling links */
+
+.post-img {
+  width: 100%;
+  height: auto;
+}
+
+.like-btn {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #eee;
+  background-color: #449;
+  border: none;
+  padding: 10px 14px;
+  position: absolute;
+  bottom: 48px;
+  right: 4px;
+}
+
+.like-btn:hover {
+  color: #f00;
+}
+
+.like-btn:active {
+  background-color: #eee;
+}
+
+/* FLOAT LAYOUT */
+.author-img {
+  float: left;
+  margin-bottom: 12px;
+}
+
+.author {
+  float: left;
+  margin: 14px;
+}
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+/* clearing float fix */
+.main-header::after {
+  clear: both;
+  display: block;
+  content: "";
+}
+
+/* new layout with floats */
+article {
+  float: left;
+  width: 850px;
+}
+
+aside {
+  float: right;
+  width: 300px;
+}
+
+footer {
+  clear: both;
+}
