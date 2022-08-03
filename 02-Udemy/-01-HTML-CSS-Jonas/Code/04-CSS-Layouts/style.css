@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 800px;
   margin: 0 auto;
   position: relative;
 }
@@ -217,45 +217,4 @@ a:active {
 
 .like-btn:active {
   background-color: #eee;
-}
-
-/* FLOAT LAYOUT */
-.author-img {
-  float: left;
-  margin-bottom: 12px;
-}
-
-.author {
-  float: left;
-  margin: 14px;
-}
-
-h1 {
-  float: left;
-}
-
-nav {
-  float: right;
-}
-
-/* clearing float fix */
-.main-header::after {
-  clear: both;
-  display: block;
-  content: "";
-}
-
-/* new layout with floats */
-article {
-  float: left;
-  width: 850px;
-}
-
-aside {
-  float: right;
-  width: 300px;
-}
-
-footer {
-  clear: both;
 }
