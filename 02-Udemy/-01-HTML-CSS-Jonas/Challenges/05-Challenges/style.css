@@ -141,22 +141,22 @@ body {
 /* FLOAT LAYOUT */
 .prod-img {
   float: left;
-  width: 33%;
+  width: 30%;
   height: auto;
+  margin-right: 40px;
 }
 
 .info {
   float: left;
-  width: 33%;
+  width: 30%;
   padding-top: 28px;
-  padding-left: 40px;
+  margin-right: 40px;
 }
 
 .details {
   float: left;
-  width: 33%;
+  width: 30%;
   padding-top: 28px;
-  padding-left: 40px;
 }
 
 .price {
@@ -166,7 +166,6 @@ body {
 
 .shipping {
   float: right;
-  margin-bottom: 0;
   padding-top: 8px;
 }
 
