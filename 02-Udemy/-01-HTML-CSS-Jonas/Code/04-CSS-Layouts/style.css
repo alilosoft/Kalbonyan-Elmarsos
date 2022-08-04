@@ -75,7 +75,6 @@ nav {
 
 nav a:link {
   margin: 0px 10px;
-  padding-top: 18px;
   display: inline-block;
 }
 
@@ -217,4 +216,55 @@ a:active {
 
 .like-btn:active {
   background-color: #eee;
+}
+
+/* FLEX LAYOUT */
+.container {
+  width: 980px;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-info {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.related-link:link {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.related-author {
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.flex-container {
+  display: flex;
+  gap: 70px;
+  margin-bottom: 48px;
+}
+
+aside {
+  margin-top: 48px;
+  align-self: flex-start;
+  flex: 0 0 300px;
+}
+
+article {
+  margin-bottom: 0px;
 }
