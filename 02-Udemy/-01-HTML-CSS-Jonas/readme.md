@@ -8,7 +8,7 @@
 - [x] [Section 3 – Challenge #3](./Challenges/04-Challenges/)
 - [x] [Section 4 – Challenge #1](./Challenges/05-Challenges/)
 - [x] [Section 4 – Challenge #2](./Challenges/06-Challenges/)
-- [ ] [Section 4 – Challenge #3](./Challenges/07-Challenges/)
+- [x] [Section 4 – Challenge #3](./Challenges/07-Challenges/)
 
 ---
 
