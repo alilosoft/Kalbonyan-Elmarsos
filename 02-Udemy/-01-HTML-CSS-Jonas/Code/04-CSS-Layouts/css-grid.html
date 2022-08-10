@@ -12,10 +12,7 @@
       .el--2 {
         background-color: orangered;
       }
-      .el--3 {
-        background-color: green;
-        height: 150px;
-      }
+
       .el--4 {
         background-color: goldenrod;
       }
@@ -36,10 +33,43 @@
         /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
-        font-size: 40px;
+        font-size: 32px;
         margin: 40px;
 
         /* CSS GRID */
+        display: grid;
+        /* grid-template-columns: 1fr auto 1fr 1fr; */
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 100px 150px;
+        column-gap: 15px;
+        row-gap: 50px;
+
+        /* TEMP */
+        display: none;
+      }
+
+      .el--1 {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .el--2 {
+        /* grid-column: 2 / -1; */
+        /* grid-row: 2 / span 2; */
+      }
+
+      .el--8 {
+        grid-column: 2 / 3;
+        grid-row: 1 / -1;
+      }
+
+      .el--3 {
+        background-color: green;
+        height: 100px;
+        text-align: center;
+
+        justify-self: stretch;
+        align-self: end;
       }
 
       .container--2 {
@@ -47,12 +77,26 @@
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
-        margin: 100px;
+        margin: 50px;
 
-        width: 1000px;
+        width: 700px;
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 150px 200px 125px;
+        grid-template-rows: 250px 150px;
+        gap: 30px;
+
+        /* Aligning the tracks inside the container: distributing the empty space */
+        justify-content: center;
+        /* justify-content: right; */
+        align-content: center;
+        /* align-content: end; */
+
+        /* Aligning items inside grid cells: Moving elements inside cells */
+        align-items: center;
+        justify-items: center;
       }
     </style>
   </head>
@@ -64,17 +108,17 @@
       <div class="el el--4">(4) are</div>
       <div class="el el--5">(5) amazing</div>
       <div class="el el--6">(6) languages</div>
-      <div class="el el--7">(7) to</div>
+      <!-- <div class="el el--7">(7) to</div> -->
       <div class="el el--8">(8) learn</div>
     </div>
 
     <div class="container--2">
       <div class="el el--1">(1)</div>
+      <div class="el el--2">(2)</div>
       <div class="el el--3">(3)</div>
       <div class="el el--4">(4)</div>
       <div class="el el--5">(5)</div>
       <div class="el el--6">(6)</div>
-      <div class="el el--7">(7)</div>
     </div>
   </body>
 </html>
