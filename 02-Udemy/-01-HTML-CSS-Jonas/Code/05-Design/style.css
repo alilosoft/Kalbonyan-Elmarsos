@@ -98,6 +98,8 @@ h1 {
   font-size: 44px;
   line-height: 1.1;
   letter-spacing: -0.8px;
+  /* x offset, y offset, blur, spread, color */
+  text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .header-text {
@@ -168,6 +170,10 @@ h3 {
   font-size: 20px;
 }
 
+.chair {
+  box-shadow: 0 18px 24px 0 rgba(0, 0, 0, 0.1);
+}
+
 .chair-details {
   list-style: none;
   margin-bottom: 24px;
@@ -187,9 +193,6 @@ h3 {
 
 .chair-details li:last-child {
   margin-bottom: 0;
-}
-
-.chair-icon {
 }
 
 .chair-price {
