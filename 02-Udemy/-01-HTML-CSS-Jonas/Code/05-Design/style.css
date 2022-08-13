@@ -45,6 +45,10 @@ h2 {
   letter-spacing: -0.4px;
 }
 
+img {
+  border-radius: 12px;
+}
+
 .grid-3-cols {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -59,6 +63,7 @@ h2 {
   background-color: #087f5b;
   color: #fff;
   display: inline-block;
+  border-radius: 100px;
 }
 
 .btn:hover,
@@ -136,10 +141,7 @@ img {
   background-color: #087f5b;
   color: #fff;
   padding: 24px;
-}
-
-.customers-img {
-  align-self: center;
+  border-radius: 12px;
 }
 
 .testimonial-box {
@@ -172,6 +174,13 @@ h3 {
 
 .chair {
   box-shadow: 0 18px 24px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.chair img {
+  /* visibility: hidden; */
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .chair-details {
