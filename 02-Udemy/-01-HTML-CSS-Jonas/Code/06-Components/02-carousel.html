@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Carousel Component</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        border: #087f5b;
+      }
+
+      img {
+        height: 200px;
+        border-radius: 12px;
+        transform: scale(1.5);
+        box-shadow: 0 12px 24px #0005;
+      }
+
+      .carousel {
+        width: 800px;
+        margin: 150px auto;
+        background-color: #087f5b;
+        border-radius: 12px;
+        padding: 32px;
+        padding-left: 84px;
+        display: flex;
+        /* gap: 24px; */
+        align-items: center;
+        position: relative;
+      }
+
+      .testimonial {
+        padding-left: 80px;
+      }
+
+      .text {
+        color: #e6fcf5;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+
+      .author {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 4px;
+      }
+
+      .job {
+        font-size: 12px;
+      }
+
+      .author,
+      .job {
+        color: #c3fae8;
+      }
+
+      .btn {
+        background-color: #fff;
+        border-style: none;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        border-radius: 50%;
+        top: 50%;
+        box-shadow: 0 0px 16px #0003;
+        cursor: pointer;
+      }
+
+      .btn-right {
+        right: 0px;
+        transform: translate(50%, -50%);
+      }
+
+      .btn-left {
+        left: 0;
+        transform: translate(-50%, -50%);
+      }
+
+      .btn-icon {
+        height: 24px;
+        stroke: #087f5b;
+      }
+
+      .pagination {
+        display: flex;
+        gap: 16px;
+        position: absolute;
+        /* CENTER IT IN THE BOTTOM */
+        bottom: 0;
+        right: 50%;
+        transform: translate(50%, 32px);
+      }
+
+      .page {
+        height: 10px;
+        width: 10px;
+        border-radius: 30%;
+        background-color: #fff;
+        border: 2px solid #087f5b;
+        cursor: pointer;
+      }
+
+      .selected {
+        background-color: #087f5b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <img src="cow.jpg" alt="a cow testifying 😁" />
+      <blockquote class="testimonial">
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta non
+          suscipit error hic nesciunt facere fugit quae quis nulla nisi odit,
+          consequuntur dolores? Officia, illum error laudantium culpa sit
+          dignissimos.
+        </p>
+        <p class="author">Cow 86-405 Wunder</p>
+        <p class="job">Milk Producer @ Green Garden</p>
+      </blockquote>
+      <button class="btn btn-left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+      <button class="btn btn-right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+      <div class="pagination">
+        <button class="page selected">&nbsp;</button>
+        <button class="page">&nbsp;</button>
+        <button class="page">&nbsp;</button>
+        <button class="page">&nbsp;</button>
+      </div>
+    </div>
+  </body>
+</html>
