@@ -119,8 +119,32 @@
   /* background-color: #fdf2e9; */
 }
 
+.step-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.step-img-box::before {
+  display: block;
+  content: "";
+  background-color: #fdf2e9;
+  width: 60%;
+  /* height: 60%; doesn't work */
+  padding-bottom: 60%; /* workaround */
+  border-radius: 50%;
+  border: 8rem solid #fae5d3;
+  transform: rotate(45deg);
+}
+
 .step-img {
-  width: 50%;
+  position: absolute;
+  width: 35%;
+}
+
+.step-txt-box {
+  align-self: center;
 }
 
 .step-number {
@@ -129,7 +153,8 @@
   color: #ccc;
   margin-bottom: 1.2rem;
 }
-.heading-level-3 {
-}
+
 .step-desc {
+  font-size: 2rem;
+  line-height: 1.6;
 }

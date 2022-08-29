@@ -28,7 +28,8 @@ body {
 
 .grid {
   display: grid;
-  gap: 4.8rem;
+  column-gap: 4.8rem;
+  row-gap: 9.6rem;
 }
 
 .grid_2cols {
@@ -40,7 +41,8 @@ body {
 }
 
 .heading-primary,
-.heading-level-2 {
+.heading-level-2,
+.heading-level-3 {
   font-weight: 700;
   letter-spacing: -0.5px;
   color: #333;
@@ -59,6 +61,9 @@ body {
 }
 
 .heading-level-3 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
 }
 
 .subheading {
