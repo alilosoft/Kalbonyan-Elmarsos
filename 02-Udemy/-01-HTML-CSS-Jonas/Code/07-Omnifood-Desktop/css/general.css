@@ -116,3 +116,7 @@ body {
   /* !important gives this rule priority when there is a conflict */
   margin-right: 1.6rem !important;
 }
+
+strong {
+  font-weight: 500;
+}
