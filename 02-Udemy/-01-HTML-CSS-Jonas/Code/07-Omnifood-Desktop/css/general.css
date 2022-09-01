@@ -32,12 +32,20 @@ body {
   row-gap: 9.6rem;
 }
 
+.grid:not(:last-child) {
+  /* margin-bottom: 9.6rem; */
+}
+
 .grid_2cols {
   grid-template-columns: repeat(2, 1fr);
 }
 
 .grid_3cols {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.grid_4cols {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .heading-primary,
@@ -139,4 +147,25 @@ strong {
 
 .center-txt {
   text-align: center;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding-left: 2rem;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.list ion-icon {
+  color: #e67e22;
+  font-size: 3rem;
 }
