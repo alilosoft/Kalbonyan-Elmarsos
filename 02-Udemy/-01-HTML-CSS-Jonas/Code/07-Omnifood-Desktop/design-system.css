@@ -21,10 +21,13 @@
       Primary: #e67e22
       Accent: 
       Tints (Lighter): #fdf2e9 #fae5d3
-      Shades (Darker):  #cf711f
+      Shades (Darker):  #2e1907 #45260a #cf711f #eb984e
       Greys: #555, #333 #5f5f5f
 
 -- 03 SHADOWS
+    0px 24px 48px #3333; (meals)
+    0px 8px 24px #3332; (pricing)
+
 -- 04 BORDER-RADIUS
     16px
      
