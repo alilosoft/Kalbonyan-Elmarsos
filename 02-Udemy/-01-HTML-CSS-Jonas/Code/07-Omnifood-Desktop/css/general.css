@@ -33,7 +33,7 @@ body {
 }
 
 .grid:not(:last-child) {
-  /* margin-bottom: 9.6rem; */
+  margin-bottom: 9.6rem;
 }
 
 .grid_2cols {
@@ -143,6 +143,10 @@ strong {
 .margin-right-small {
   /* !important gives this rule priority when there is a conflict */
   margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
 }
 
 .center-txt {
