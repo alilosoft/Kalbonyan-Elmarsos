@@ -1,0 +1,11 @@
+@media (max-width: 1200px) {
+  .section-hero {
+    background-color: cornflowerblue;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-hero {
+    background-color: aquamarine;
+  }
+}
