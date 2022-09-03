@@ -1,11 +1,38 @@
-@media (max-width: 1200px) {
-  .section-hero {
-    background-color: cornflowerblue;
+/* for media queries rem and em doesn't depends on the <html> font size
+they always equal to the browser's config (default 16px) */
+
+/* ⚠⚠⚠ 1em = 17px (my custom config) ⚠⚠⚠ */
+
+/* em = the current font size */
+/* rem = the root element font size (i.e the html element) */
+
+/* -------------------------------------------- */
+/* BELOW 1360px = 80em (SMALL LAPTOPS)  */
+/* -------------------------------------------- */
+@media (max-width: 80em) {
+  .hero-box {
+    width: 120em;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
-  .section-hero {
-    background-color: aquamarine;
-  }
-}
+/* 
+
+Font Size (px):
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+Spacing System (px):
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+      
+*/
