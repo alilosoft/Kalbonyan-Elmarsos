@@ -7,11 +7,11 @@ they always equal to the browser's config (default 16px) */
 /* rem = the root element font size (i.e the html element) */
 
 /* -------------------------------------------- */
-/* BELOW 1360px = 80em (SMALL LAPTOPS)  */
+/* BELOW 1360px (SMALL LAPTOPS)  */
 /* -------------------------------------------- */
 @media (max-width: 80em) {
   .hero-box {
-    width: 120em;
+    max-width: 120em;
   }
 
   .heading-primary {
@@ -27,7 +27,49 @@ they always equal to the browser's config (default 16px) */
   }
 }
 
-/* 
+/* -------------------------------------------- */
+/* BELOW 12000px (LANDSCAPE TABLETS)  */
+/* -------------------------------------------- */
+@media (max-width: 70em) {
+  html {
+    font-size: 53%;
+  }
+
+  .heading-level-2 {
+    font-size: 3.6rem;
+    line-height: 1.2;
+    margin-bottom: 8rem;
+  }
+
+  .heading-level-3 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .header {
+    padding: 0 2.4rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .hero-box {
+    column-gap: 6.4rem;
+  }
+
+  .testimonials-box {
+    padding: 6.4rem 2.4rem;
+  }
+}
+
+/*-----------------------------------------------------------------------------
 
 Font Size (px):
       10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
@@ -35,4 +77,4 @@ Font Size (px):
 Spacing System (px):
       2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
       
-*/
+--------------------------------------------------------------------------------*/

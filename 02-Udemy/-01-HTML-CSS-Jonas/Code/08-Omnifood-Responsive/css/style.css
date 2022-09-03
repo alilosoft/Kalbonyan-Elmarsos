@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   height: 6.4rem; /* because we will make the header sticky */
-  padding: 0 1.2rem;
+  padding: 0 2.4rem;
 }
 
 .logo {
@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 3.2rem;
+  gap: 4.8rem;
 }
 
 .main-nav-link:link,
@@ -62,7 +62,7 @@
 }
 
 .hero-box {
-  width: 130rem;
+  max-width: 130rem;
   margin: 0 auto;
   padding: 0 2.4rem;
   display: grid;
