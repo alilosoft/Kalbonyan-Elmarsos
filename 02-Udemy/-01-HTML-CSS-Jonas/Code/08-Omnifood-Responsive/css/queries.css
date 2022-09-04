@@ -28,7 +28,7 @@ they always equal to the browser's config (default 16px) */
 }
 
 /* -------------------------------------------- */
-/* BELOW 12000px (LANDSCAPE TABLETS)  */
+/* BELOW 1190px (LANDSCAPE TABLETS)  */
 /* -------------------------------------------- */
 @media (max-width: 70em) {
   html {
@@ -61,11 +61,139 @@ they always equal to the browser's config (default 16px) */
   }
 
   .hero-box {
-    column-gap: 6.4rem;
+    gap: 6.4rem;
   }
 
   .testimonials-box {
     padding: 6.4rem 2.4rem;
+  }
+}
+
+/* -------------------------------------------- */
+/* BELOW 935px (PORTRAIT TABLETS)  */
+/* -------------------------------------------- */
+@media (max-width: 55em) {
+  html {
+    font-size: 47%;
+  }
+
+  .grid {
+    column-gap: 3.2rem;
+    row-gap: 4.8rem;
+  }
+
+  .hero-box {
+    padding: 0 2.4rem;
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+    gap: 2.4rem;
+  }
+
+  .hero-txt-box {
+    padding: 0 4.8rem;
+  }
+
+  .delivered-meals {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+
+  .hero-img {
+    width: 60%;
+    transform: rotate(90deg);
+  }
+
+  .logos img {
+    height: 2.4rem;
+  }
+
+  .step-number {
+    font-size: 7.4rem;
+  }
+
+  .meal-info-box {
+    padding: 2.4rem;
+    padding-top: 2.4rem;
+  }
+
+  .pricing-card {
+    padding: 2.4rem;
+    width: 86%;
+  }
+
+  .cta {
+    grid-template-columns: 55fr 45fr;
+  }
+
+  .cta-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2.4rem;
+  }
+
+  .cta-form button {
+    margin-top: 1.2rem;
+  }
+
+  /* MOBILE NAV */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 1;
+  }
+
+  .header {
+    position: relative;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8rem;
+    background-color: #f5cba7ee;
+    height: 100vh;
+    width: 60%;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 2.4rem 2.4rem #0002;
+
+    /* display: none; we can't animate this property */
+
+    transition: all 0.5s ease-in;
+    /* hide the element by making it transparent */
+    opacity: 0;
+    /* don' respond to mouse/keyboard */
+    pointer-events: none;
+    /* hide for screen readers */
+    visibility: hidden;
+    transform: translateX(110%); /* for slide-in animation */
+  }
+
+  .menu-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .menu-open .icon-mobile-nav.close {
+    display: block;
+  }
+
+  .menu-open .icon-mobile-nav.open {
+    display: none;
+  }
+
+  .main-nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.4rem;
+    gap: 4.8rem;
   }
 }
 
