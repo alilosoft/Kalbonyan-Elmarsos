@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  font-size: 62.5%; /* default: 10/16 */
+  font-size: 58.83%; /* my-pref: 10/17 */
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  /* font-size: 18px; */
+  color: #555;
+  line-height: 1;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+/* ----------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------- */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid_2cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid_3cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid_4cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid_5cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.heading-primary,
+.heading-level-2,
+.heading-level-3 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #333;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-level-2 {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 8rem;
+}
+
+.heading-level-3 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.6px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  font-size: 2rem;
+  /* font-weight: 500; */
+  text-decoration: none;
+  transition: all 300ms;
+  /* only for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  background-color: #cf711f;
+  box-shadow: inset 0 0 0 0.5px #333;
+}
+
+.btn-outlined:link,
+.btn-outlined:visited {
+  background-color: #fff;
+  color: #333;
+}
+
+.btn-outlined:hover,
+.btn-outlined:active {
+  background-color: #fdf2e9;
+  /* border: 0.3px solid #333; */
+  /* Trick: use a shadow to make borders inside the button */
+  box-shadow: inset 0 0 0 0.5px #333;
+}
+
+.btn_form {
+  background-color: #45260a;
+  color: #fdf2e9;
+}
+
+.btn_form:hover {
+  color: #45260a;
+  background-color: #fdf2e9;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.4rem #45260abb !important;
+  transition: all 0.3s;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.link:link,
+.link:visited {
+  text-decoration: none;
+  display: inline-block;
+  color: #e67e22;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 300ms;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+.margin-right-small {
+  /* !important gives this rule priority when there is a conflict */
+  margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-txt {
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding-left: 2rem;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.list ion-icon {
+  color: #e67e22;
+  font-size: 3rem;
+}

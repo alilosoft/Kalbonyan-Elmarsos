@@ -1,0 +1,365 @@
+/* for media queries rem and em doesn't depends on the <html> font size
+they always equal to the browser's config (default 16px) */
+
+/* ⚠⚠⚠ 1em = 17px (my custom config) ⚠⚠⚠ */
+
+/* em = the current font size */
+/* rem = the root element font size (i.e the html element) */
+
+/* -------------------------------------------- */
+/* BELOW 1360px (SMALL LAPTOPS)  */
+/* -------------------------------------------- */
+@media (max-width: 80em) {
+  .hero-box {
+    max-width: 120em;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* -------------------------------------------- */
+/* BELOW 1190px (LANDSCAPE TABLETS)  */
+/* -------------------------------------------- */
+@media (max-width: 70em) {
+  html {
+    font-size: 53%;
+  }
+
+  .heading-level-2 {
+    font-size: 3.6rem;
+    line-height: 1.2;
+    margin-bottom: 8rem;
+  }
+
+  .heading-level-3 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .header {
+    padding: 0 2.4rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .hero-box {
+    gap: 6.4rem;
+  }
+
+  .testimonials-box {
+    padding: 6.4rem 2.4rem;
+  }
+}
+
+/* -------------------------------------------- */
+/* BELOW 935px (PORTRAIT TABLETS)  */
+/* -------------------------------------------- */
+@media (max-width: 55em) {
+  html {
+    font-size: 47%;
+  }
+
+  .grid {
+    column-gap: 3.2rem;
+    row-gap: 4.8rem;
+  }
+
+  .hero-box {
+    padding: 0 2.4rem;
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+    gap: 2.4rem;
+  }
+
+  .hero-txt-box {
+    padding: 0 4.8rem;
+  }
+
+  .delivered-meals {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+
+  .hero-img {
+    width: 60%;
+    transform: rotate(90deg);
+  }
+
+  .logos img {
+    height: 2.4rem;
+  }
+
+  .step-number {
+    font-size: 7.4rem;
+  }
+
+  .meal-info-box {
+    padding: 2.4rem;
+    padding-top: 2.4rem;
+  }
+
+  .pricing-card {
+    padding: 2.4rem;
+    width: 86%;
+  }
+
+  .cta {
+    grid-template-columns: 55fr 45fr;
+  }
+
+  .cta-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2.4rem;
+  }
+
+  .cta-form button {
+    margin-top: 1.2rem;
+  }
+
+  /* MOBILE NAV */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 1;
+  }
+
+  .header {
+    position: relative;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8rem;
+    background-color: #f5cba7ee;
+    height: 100vh;
+    width: 60%;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 2.4rem 2.4rem #0002;
+
+    /* display: none; we can't animate this property */
+
+    transition: all 0.5s ease-in;
+    /* hide the element by making it transparent */
+    opacity: 0;
+    /* don' respond to mouse/keyboard */
+    pointer-events: none;
+    /* hide for screen readers */
+    visibility: hidden;
+    transform: translateX(110%); /* for slide-in animation */
+  }
+
+  .menu-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .menu-open .icon-mobile-nav.close {
+    display: block;
+  }
+
+  .menu-open .icon-mobile-nav.open {
+    display: none;
+  }
+
+  .main-nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.4rem;
+    gap: 4.8rem;
+  }
+}
+
+/* -------------------------------------------- */
+/* BELOW 697px (SMALL TABLETS)  */
+/* -------------------------------------------- */
+@media (max-width: 41em) {
+  .logos img {
+    height: 1.6rem;
+  }
+
+  .grid_3cols,
+  .grid_4cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diets {
+    /* align-self: center; */
+    /* justify-self: center; */
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .diets .heading-level-3 {
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .diets .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 0;
+  }
+
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .pricing-card {
+    padding: 1.6rem;
+    width: 100%;
+  }
+
+  .grid_footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .footer-nav {
+    grid-row: 1;
+    grid-column: span 2;
+  }
+
+  .footer-logo {
+    grid-column: span 3;
+  }
+
+  .footer-contact {
+    grid-column: span 3;
+  }
+
+  .footer .grid {
+    row-gap: 8rem;
+  }
+}
+
+/* -------------------------------------------- */
+/* BELOW 544px (PHONES)  */
+/* -------------------------------------------- */
+@media (max-width: 32em) {
+  body {
+    /* background-color: aqua; */
+  }
+
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .grid_2cols,
+  .grid_3cols,
+  .grid_4cols {
+    grid-template-columns: 1fr;
+  }
+
+  .section-hero {
+    padding: 6.4rem 0;
+  }
+
+  .hero-txt-box {
+    padding: 0 0.8rem;
+  }
+
+  .heading-level-2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 6.4rem;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 3.2rem 1.6rem;
+  }
+
+  .logos img {
+    height: 1.2rem;
+  }
+
+  .step-img-box {
+    margin-top: 6.4rem;
+  }
+
+  .step-1-img {
+    grid-row: 1;
+  }
+
+  .step-3-img {
+    grid-row: 5;
+  }
+
+  .meal-info-box {
+    padding: 4.8rem;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+
+  .pricing-card {
+    padding: 1.6rem;
+    width: 85%;
+    justify-self: center !important;
+  }
+
+  .feature-icon {
+    margin-bottom: 2.4rem;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-img-box {
+    grid-row: 1;
+    height: 35rem;
+  }
+}
+
+/*-----------------------------------------------------------------------------
+
+Font Size (px):
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+Spacing System (px):
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+      
+--------------------------------------------------------------------------------*/
