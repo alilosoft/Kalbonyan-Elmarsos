@@ -197,6 +197,76 @@ they always equal to the browser's config (default 16px) */
   }
 }
 
+/* -------------------------------------------- */
+/* BELOW 697px (SMALL TABLETS)  */
+/* -------------------------------------------- */
+@media (max-width: 41em) {
+  .logos img {
+    height: 1.6rem;
+  }
+
+  .grid_3cols,
+  .grid_4cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diets {
+    /* align-self: center; */
+    /* justify-self: center; */
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .diets .heading-level-3 {
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .diets .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 0;
+  }
+
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .pricing-card {
+    padding: 1.6rem;
+    width: 100%;
+  }
+
+  .grid_footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .footer-nav {
+    grid-row: 1;
+    grid-column: span 2;
+  }
+
+  .footer-logo {
+    grid-column: span 3;
+  }
+
+  .footer-contact {
+    grid-column: span 3;
+  }
+
+  .footer .grid {
+    row-gap: 8rem;
+  }
+}
+
 /*-----------------------------------------------------------------------------
 
 Font Size (px):
