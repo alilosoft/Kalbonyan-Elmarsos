@@ -23,6 +23,7 @@
   list-style: none;
   gap: 4.8rem;
   font-size: 1.8rem;
+  text-align: center;
 }
 
 .main-nav-link:link,
@@ -52,6 +53,7 @@
   background-color: #cf711f;
 }
 
+/* MOBILE NAV */
 .btn-mobile-nav {
   /* visibility: hidden; */
   border: none;
@@ -68,12 +70,18 @@
   color: #333;
 }
 
-.icon-mobile-nav.open {
-  /* display: none; */
-}
-
 .icon-mobile-nav.close {
   display: none;
+}
+
+/* STICKY NAV */
+.sticky {
+  position: fixed !important;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5cba7ee;
+  z-index: 9999;
 }
 
 /* ----------------------------- */

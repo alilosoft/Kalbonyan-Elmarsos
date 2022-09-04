@@ -9,6 +9,9 @@ html {
   font-size: 62.5%; /* default: 10/16 */
   font-size: 58.83%; /* my-pref: 10/17 */
   overflow-x: hidden;
+
+  /* doesn't work on safari => implemented using js */
+  /* scroll-behavior: smooth; */
 }
 
 body {

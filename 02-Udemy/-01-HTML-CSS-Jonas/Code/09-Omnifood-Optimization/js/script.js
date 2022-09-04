@@ -1,3 +1,55 @@
+console.log("hello js");
+
+// const h1 = document.querySelector(".heading-primary");
+
+// console.log(h1);
+
+// h1.addEventListener("click", function () {
+//   h1.textContent = "بسم الله الرحمان الرحيم";
+//   h1.style.backgroundColor = "orange";
+//   h1.style.padding = "5rem";
+//   h1.style.textAlign = "right";
+// });
+
+// show the current year in copyright section
+const yearEl = document.querySelector(".year");
+console.log(yearEl.textContent);
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
+
+// making the mobile menu button work
+const menu_btnEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+menu_btnEl.addEventListener("click", function () {
+  headerEl.classList.toggle("menu-open");
+});
+
+// ==================================
+// fixing smooth scrolling on safari
+// ==================================
+const allLinks = document.querySelectorAll("a:link");
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // hide the mobile nav menu
+    headerEl.classList.remove("menu-open");
+
+    const hrefAtt = link.getAttribute("href");
+    // scroll to the top
+    if (hrefAtt === "#") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else if (hrefAtt.startsWith("#")) {
+      //  scroll to other links
+      const targetEl = document.querySelector(hrefAtt);
+      targetEl.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {

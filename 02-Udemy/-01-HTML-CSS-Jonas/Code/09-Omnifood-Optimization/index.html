@@ -23,10 +23,16 @@
       nomodule=""
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
     ></script>
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+
     <title>Omnifood</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header sticky">
       <a href="#">
         <img class="logo" src="img/omnifood-logo.png" alt="Omnifood logo" />
       </a>
@@ -64,10 +70,13 @@
               nutritional needs.
             </p>
 
-            <a href="#" class="btn btn-full margin-right-small"
-              >Start eating well</a
-            >
-            <a href="#" class="btn btn-outlined">Learn more &darr;</a>
+            <a href="#subscribe" class="btn btn-full margin-right-small">
+              Start eating well
+            </a>
+            <a href="#how-it-works" class="btn btn-outlined">
+              Learn more &darr;
+            </a>
+
             <div class="delivered-meals">
               <div class="delivered-imgs">
                 <img src="img/customers/customer-2.jpg" alt="customer face" />
@@ -626,7 +635,7 @@
           </ul>
 
           <div class="copyright">
-            <p>Copyright &copy; 2027 Omnifood.Inc</p>
+            <p>Copyright &copy; <span class="year">2027</span> Omnifood.Inc</p>
             <p>All rights reserved.</p>
           </div>
         </div>
