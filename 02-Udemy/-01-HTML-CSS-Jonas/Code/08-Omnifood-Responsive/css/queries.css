@@ -267,6 +267,93 @@ they always equal to the browser's config (default 16px) */
   }
 }
 
+/* -------------------------------------------- */
+/* BELOW 544px (PHONES)  */
+/* -------------------------------------------- */
+@media (max-width: 32em) {
+  body {
+    /* background-color: aqua; */
+  }
+
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .grid_2cols,
+  .grid_3cols,
+  .grid_4cols {
+    grid-template-columns: 1fr;
+  }
+
+  .section-hero {
+    padding: 6.4rem 0;
+  }
+
+  .hero-txt-box {
+    padding: 0 0.8rem;
+  }
+
+  .heading-level-2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 6.4rem;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 3.2rem 1.6rem;
+  }
+
+  .logos img {
+    height: 1.2rem;
+  }
+
+  .step-img-box {
+    margin-top: 6.4rem;
+  }
+
+  .step-1-img {
+    grid-row: 1;
+  }
+
+  .step-3-img {
+    grid-row: 5;
+  }
+
+  .meal-info-box {
+    padding: 4.8rem;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+
+  .pricing-card {
+    padding: 1.6rem;
+    width: 85%;
+    justify-self: center !important;
+  }
+
+  .feature-icon {
+    margin-bottom: 2.4rem;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-img-box {
+    grid-row: 1;
+    height: 35rem;
+  }
+}
+
 /*-----------------------------------------------------------------------------
 
 Font Size (px):
