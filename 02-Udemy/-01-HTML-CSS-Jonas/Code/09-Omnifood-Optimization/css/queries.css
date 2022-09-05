@@ -203,6 +203,10 @@ they always equal to the browser's config (default 16px) */
 /* BELOW 697px (SMALL TABLETS)  */
 /* -------------------------------------------- */
 @media (max-width: 41em) {
+  .main-nav {
+    width: 100%;
+  }
+
   .logos img {
     height: 1.6rem;
   }
