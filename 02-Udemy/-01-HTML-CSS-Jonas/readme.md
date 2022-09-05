@@ -12,12 +12,10 @@
 
 ---
 
-## Projects
-
-### Omnifood
+## Final Project: **_Omnifood_**
 
 - [Project-code](./Projects/Omnifood) <br>
-- [Live Demo](https://omnifood.dev/)
+- [Live Demo](https://omnifood.alilo.dev/)
 
 ---
 
@@ -27,6 +25,6 @@
 
 ---
 
-[Course-Link](https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3)<br>
+### [Course-Link](https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3) | [Certificate](https://www.udemy.com/certificate/UC-1c5a1d49-6771-492d-b713-fe1f8af99fdc/)
 
-![Certificate](https://via.placeholder.com/468x300?text=Certificate+Here)
+![Certificate](certificate.jpg)
