@@ -75,13 +75,28 @@
 }
 
 /* STICKY NAV */
-.sticky {
-  position: fixed !important;
-  top: 0;
+.sticky .section-hero {
+  /* when we set the nav-menu position to fixed it will be removed from the page model flow so we replace it with this margin */
+  margin-top: 6.4rem;
+}
+
+.sticky .header {
+  position: fixed;
+  top: -8rem;
   bottom: 0;
   width: 100%;
+  height: 8rem;
   background-color: #f5cba7ee;
   z-index: 9999;
+  transition: all 0.5s;
+}
+
+.show {
+  transform: translateY(8rem);
+}
+
+.hide {
+  transform: translateY(-8rem);
 }
 
 /* ----------------------------- */

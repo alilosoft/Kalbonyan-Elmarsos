@@ -1,16 +1,5 @@
 console.log("hello js");
 
-// const h1 = document.querySelector(".heading-primary");
-
-// console.log(h1);
-
-// h1.addEventListener("click", function () {
-//   h1.textContent = "بسم الله الرحمان الرحيم";
-//   h1.style.backgroundColor = "orange";
-//   h1.style.padding = "5rem";
-//   h1.style.textAlign = "right";
-// });
-
 // show the current year in copyright section
 const yearEl = document.querySelector(".year");
 console.log(yearEl.textContent);
@@ -23,6 +12,40 @@ const headerEl = document.querySelector(".header");
 menu_btnEl.addEventListener("click", function () {
   headerEl.classList.toggle("menu-open");
 });
+
+// show/hide sticky nav-bar
+const sectionHeroEl = document.querySelector(".section-hero");
+
+new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    headerEl.classList.toggle("show", !ent.isIntersecting);
+    headerEl.classList.toggle("hide", ent.isIntersecting);
+    if (!ent.isIntersecting) {
+      document.body.classList.add("sticky");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+).observe(sectionHeroEl);
+
+new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    if (!ent.isIntersecting) {
+      document.body.classList.remove("sticky");
+      headerEl.classList.remove("hide");
+      headerEl.classList.remove("menu-open");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+  }
+).observe(headerEl);
 
 // ==================================
 // fixing smooth scrolling on safari
