@@ -1,9 +1,9 @@
-let calcGrade = function (score, max = 20) {
+const calcGrade = function (score, max = 20) {
   let grade
   if (score > 20 || score < 0) {
     console.log('Please provide a score between 0 & 20')
   } else {
-    let percent = (score / max) * 100
+    const percent = (score / max) * 100
 
     if (percent >= 90) {
       grade = 'A'
