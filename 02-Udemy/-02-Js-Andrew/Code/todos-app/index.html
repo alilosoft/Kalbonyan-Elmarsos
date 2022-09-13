@@ -4,12 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ion-icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+
+    <script src="../common/ion-icons.js"></script>
+    <!-- UUID -->
+    <script src="../common/uuidv4.js"></script>
+
+    <!-- app scripts -->
+    <script defer src="functions.js"></script>
     <script defer src="todos-app.js"></script>
+
     <title>My TODOs</title>
   </head>
   <body>
     <h1>Tasks TODO:</h1>
-    <h2 id="remaining-txt"></h2>
+    <h2 id="summary-txt"></h2>
     <input id="todos-search" type="text" placeholder="Search for a todo" />
     <div>
       <input type="checkbox" id="hide-completed" />
