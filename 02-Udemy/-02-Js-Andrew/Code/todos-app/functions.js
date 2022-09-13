@@ -39,11 +39,17 @@ const deleteTodo = function (id, todos = myTodos) {
 
 const createTodoEl = function (todo) {
   const todoEl = document.createElement('li')
-  // checkbox
+  // checkbox setup
   const checkBox = document.createElement('input')
   checkBox.setAttribute('type', 'checkbox')
+  checkBox.checked = todo.completed
+  checkBox.addEventListener('change', function (e) {
+    todo.completed = e.target.checked
+    storeTodos()
+    showTodos()
+  })
   todoEl.appendChild(checkBox)
-  // text
+  // text setup
   const todoText = document.createElement('span')
   if (todo.text.length === 0) {
     todoText.textContent = `${todo.id}`
@@ -51,7 +57,7 @@ const createTodoEl = function (todo) {
     todoText.textContent = `${todo.text}`
   }
   todoEl.appendChild(todoText)
-  // delete btn
+  // delete btn setup
   const deleteBtn = document.createElement('button')
   deleteBtn.appendChild(createIonIcon('trash'))
   deleteBtn.onclick = function (e) {
