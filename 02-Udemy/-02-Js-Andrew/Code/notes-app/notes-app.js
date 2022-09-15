@@ -1,24 +1,32 @@
 const myNotes = loadNotes()
 const myFilters = {
   searchText: '',
+  orderBy: 'edited',
 }
-showNotes()
+showNotes(sortNotes(filterNotes(myNotes)))
 
 // add new note
 document.querySelector('#btn-add-note').addEventListener('click', function (e) {
   console.log('adding new note...')
-  const n = Math.ceil(Math.random() * 100)
-  myNotes.push({
-    id: self.crypto.randomUUID(),
-    title: `Note${n}`,
-    body: 'abcd',
-  })
+  const note = createNote()
+  location.assign(`edit.html#${note.id}`)
   storeNotes()
-  showNotes()
 })
 
 // filter notes
 document.querySelector('#search-txt').addEventListener('input', function (e) {
   myFilters.searchText = e.target.value
-  showNotes(filterNotes(myNotes, myFilters))
+  showNotes(sortNotes(filterNotes(myNotes, myFilters), myFilters.orderBy))
+})
+
+window.addEventListener('storage', function (e) {
+  if (e.key === 'notes') {
+    location.reload()
+  }
+})
+
+// sort notes
+document.querySelector('#sort-notes').addEventListener('change', function (e) {
+  myFilters.orderBy = e.target.value
+  showNotes(sortNotes(filterNotes(myNotes, myFilters), myFilters.orderBy))
 })

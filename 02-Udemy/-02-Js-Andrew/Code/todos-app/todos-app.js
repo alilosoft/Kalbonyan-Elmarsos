@@ -7,22 +7,6 @@ const myFilters = {
   hideCompleted: false,
 }
 
-// search todo
-document.querySelector('#todos-search').addEventListener('input', function (e) {
-  myFilters.searchText = e.target.value
-  const filtered = filterTodos(myTodos, myFilters)
-  showTodos(filtered)
-})
-
-// hide completed
-document
-  .querySelector('#hide-completed')
-  .addEventListener('change', function (e) {
-    myFilters.hideCompleted = e.target.checked
-    const filtered = filterTodos(myTodos, myFilters)
-    showTodos(filtered)
-  })
-
 // new todo
 document
   .querySelector('#new-todo-form')
@@ -37,6 +21,22 @@ document
     input.value = ''
     storeTodos(myTodos)
     showTodos(filterTodos(myTodos))
+  })
+
+// search todo
+document.querySelector('#todos-search').addEventListener('input', function (e) {
+  myFilters.searchText = e.target.value
+  const filtered = filterTodos(myTodos, myFilters)
+  showTodos(filtered)
+})
+
+// hide completed
+document
+  .querySelector('#hide-completed')
+  .addEventListener('change', function (e) {
+    myFilters.hideCompleted = e.target.checked
+    const filtered = filterTodos(myTodos, myFilters)
+    showTodos(filtered)
   })
 
 showTodos()

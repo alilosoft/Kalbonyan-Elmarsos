@@ -8,6 +8,21 @@ const loadNotes = function () {
   }
 }
 
+// create new note
+const createNote = function () {
+  const n = Math.ceil(Math.random() * 100)
+  const timeStamp = dayjs().valueOf()
+  const newNote = {
+    id: self.crypto.randomUUID(),
+    title: `Note${n}`,
+    body: 'abcd',
+    createdAt: timeStamp,
+    updatedAt: timeStamp,
+  }
+  myNotes.push(newNote)
+  return newNote
+}
+
 // store notes to local storage
 const storeNotes = function (notes = myNotes) {
   localStorage.setItem('notes', JSON.stringify(notes))
@@ -18,6 +33,20 @@ const filterNotes = function (notes, filters = myFilters) {
   return notes.filter(function (note) {
     return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
   })
+}
+
+const sortNotes = function (notes, orderBy = 'edited') {
+  notes.sort(function (n1, n2) {
+    if (orderBy === 'created') {
+      return n2.createdAt - n1.createdAt
+    } else if (orderBy === 'edited') {
+      return n2.updatedAt - n1.updatedAt
+    } else {
+      // alphabetically
+      return n1.title.localeCompare(n2.title)
+    }
+  })
+  return notes
 }
 
 // render notes in html
@@ -37,7 +66,7 @@ const deleteNote = function (id, notes = myNotes) {
   notes.splice(index, 1)
 }
 
-// generate a note <li>
+// generate note element
 const createNoteEl = function (note) {
   const noteEl = document.createElement('li')
   // delete button
@@ -50,13 +79,24 @@ const createNoteEl = function (note) {
   }
   noteEl.appendChild(deleteBtn)
 
-  // note text
-  const noteText = document.createElement('span')
+  // note title/edit link
+  const editLink = document.createElement('a')
+  editLink.href = `edit.html#${note.id}`
   if (note.title.trim().length > 0) {
-    noteText.textContent = note.title
+    editLink.textContent = note.title
   } else {
-    noteText.textContent = 'Untitled'
+    editLink.textContent = 'Untitled'
   }
-  noteEl.appendChild(noteText)
+  noteEl.appendChild(editLink)
+
+  // last edit
+  const lastUpdateEl = document.createElement('p')
+  lastUpdateEl.textContent = lastUpdateTxt(note.updatedAt)
+  noteEl.appendChild(lastUpdateEl)
   return noteEl
+}
+
+const lastUpdateTxt = function (timestamp) {
+  const time = dayjs(timestamp).fromNow()
+  return `Updated ${time}`
 }
