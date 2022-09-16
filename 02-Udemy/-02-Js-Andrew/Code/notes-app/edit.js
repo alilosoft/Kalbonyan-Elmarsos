@@ -5,7 +5,7 @@ const id = location.hash.substring(1)
 const myNotes = loadNotes()
 const note = myNotes.find((note) => note.id === id)
 
-if (note === undefined) {
+if (!note) {
   location.assign('index.html')
 } else {
   const titleEl = document.querySelector('#note-title')

@@ -8,20 +8,18 @@ const myFilters = {
 }
 
 // new todo
-document
-  .querySelector('#new-todo-form')
-  .addEventListener('submit', function (e) {
-    e.preventDefault()
-    const input = e.target.elements.todoText
-    myTodos.push({
-      id: uuidv4(),
-      text: input.value,
-      completed: false,
-    })
-    input.value = ''
-    storeTodos(myTodos)
-    showTodos(filterTodos(myTodos))
+document.querySelector('#new-todo-form').addEventListener('submit', (e) => {
+  e.preventDefault()
+  const input = e.target.elements.todoText
+  myTodos.push({
+    id: uuidv4(),
+    text: input.value,
+    completed: false,
   })
+  input.value = ''
+  storeTodos(myTodos)
+  showTodos(filterTodos(myTodos))
+})
 
 // search todo
 document.querySelector('#todos-search').addEventListener('input', (e) => {

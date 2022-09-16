@@ -1,6 +1,6 @@
 const loadTodos = () => {
   const stored = localStorage.getItem('todos')
-  return stored === null ? [] : JSON.parse(stored)
+  return stored ? JSON.parse(stored) : []
 }
 
 const storeTodos = (todos = myTodos) =>
@@ -41,10 +41,10 @@ const createTodoEl = (todo) => {
   todoEl.appendChild(checkBox)
   // text setup
   const todoText = document.createElement('span')
-  if (todo.text.length === 0) {
-    todoText.textContent = `${todo.id}`
-  } else {
+  if (todo.text.length) {
     todoText.textContent = `${todo.text}`
+  } else {
+    todoText.textContent = `${todo.id}`
   }
   todoEl.appendChild(todoText)
   // delete btn setup

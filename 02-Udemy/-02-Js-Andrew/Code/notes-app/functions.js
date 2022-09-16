@@ -1,7 +1,7 @@
 // load notes from local storage
 const loadNotes = () => {
   const storedNotes = localStorage.getItem('notes')
-  return storedNotes === null ? [] : JSON.parse(storedNotes)
+  return storedNotes ? JSON.parse(storedNotes) : []
 }
 
 // create new note
@@ -69,7 +69,7 @@ const createNoteEl = (note) => {
   // note title/edit link
   const editLink = document.createElement('a')
   editLink.href = `edit.html#${note.id}`
-  editLink.textContent = note.title.trim().length > 0 ? note.title : 'Untitled'
+  editLink.textContent = note.title.trim().length ? note.title : 'Untitled'
   noteEl.appendChild(editLink)
 
   // last edit
