@@ -24,19 +24,17 @@ document
   })
 
 // search todo
-document.querySelector('#todos-search').addEventListener('input', function (e) {
+document.querySelector('#todos-search').addEventListener('input', (e) => {
   myFilters.searchText = e.target.value
   const filtered = filterTodos(myTodos, myFilters)
   showTodos(filtered)
 })
 
 // hide completed
-document
-  .querySelector('#hide-completed')
-  .addEventListener('change', function (e) {
-    myFilters.hideCompleted = e.target.checked
-    const filtered = filterTodos(myTodos, myFilters)
-    showTodos(filtered)
-  })
+document.querySelector('#hide-completed').addEventListener('change', (e) => {
+  myFilters.hideCompleted = e.target.checked
+  const filtered = filterTodos(myTodos, myFilters)
+  showTodos(filtered)
+})
 
 showTodos()

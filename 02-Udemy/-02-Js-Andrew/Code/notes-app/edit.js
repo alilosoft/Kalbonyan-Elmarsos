@@ -1,10 +1,9 @@
+// get the id from url
 const id = location.hash.substring(1)
 
 // find the note in storage
 const myNotes = loadNotes()
-const note = myNotes.find(function (note) {
-  return note.id === id
-})
+const note = myNotes.find((note) => note.id === id)
 
 if (note === undefined) {
   location.assign('index.html')
@@ -17,22 +16,18 @@ if (note === undefined) {
   bodyEl.value = note.body
   lastUpdateEl.textContent = lastUpdateTxt(note.updatedAt)
 
-  titleEl.addEventListener('input', function (e) {
-    note.title = e.target.value
-  })
+  titleEl.addEventListener('input', (e) => (note.title = e.target.value))
 
-  bodyEl.addEventListener('input', function (e) {
-    note.body = e.target.value
-  })
+  bodyEl.addEventListener('input', (e) => (note.body = e.target.value))
 
-  document.querySelector('#save-btn').addEventListener('click', function (e) {
+  document.querySelector('#save-btn').addEventListener('click', (e) => {
     note.updatedAt = dayjs().valueOf()
     storeNotes()
     location.assign('index.html')
   })
 }
 
-window.addEventListener('storage', function (e) {
+window.addEventListener('storage', (e) => {
   if (e.key === 'notes') {
     location.reload()
   }
