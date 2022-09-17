@@ -1,6 +1,13 @@
+'use strict'
+
 const loadTodos = () => {
-  const stored = localStorage.getItem('todos')
-  return stored ? JSON.parse(stored) : []
+  try {
+    const stored = localStorage.getItem('todos')
+    return stored ? JSON.parse(stored) : []
+  } catch (error) {
+    console.log('Invalid data loaded, resetting...')
+    return []
+  }
 }
 
 const storeTodos = (todos = myTodos) =>

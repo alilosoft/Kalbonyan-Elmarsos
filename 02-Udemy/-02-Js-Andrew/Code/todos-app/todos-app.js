@@ -1,3 +1,5 @@
+'use strict'
+
 // load from storage
 const myTodos = loadTodos()
 

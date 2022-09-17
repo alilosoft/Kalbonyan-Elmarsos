@@ -1,4 +1,8 @@
 const calcGrade = function (score, max = 20) {
+  if ([typeof score, typeof max].some((t) => t !== 'number')) {
+    throw Error('Args must be numbers')
+  }
+
   let grade
   if (score > 20 || score < 0) {
     console.log('Please provide a score between 0 & 20')
@@ -20,10 +24,11 @@ const calcGrade = function (score, max = 20) {
   }
 }
 
-calcGrade(20)
-calcGrade(17)
-calcGrade(15)
-calcGrade(10)
-calcGrade(5)
-calcGrade(25)
-calcGrade(-5)
+try {
+  calcGrade(20)
+  calcGrade(15)
+  calcGrade(true)
+  calcGrade('20')
+} catch (error) {
+  console.log('Error 😝\n' + error.stack)
+}

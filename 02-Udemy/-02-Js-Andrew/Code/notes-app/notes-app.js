@@ -1,3 +1,5 @@
+'use strict'
+
 const myNotes = loadNotes()
 const myFilters = {
   searchText: '',

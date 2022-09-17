@@ -1,3 +1,5 @@
+'use strict'
+
 // get the id from url
 const id = location.hash.substring(1)
 

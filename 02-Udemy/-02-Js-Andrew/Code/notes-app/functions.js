@@ -1,7 +1,15 @@
+'use strict'
+
 // load notes from local storage
 const loadNotes = () => {
-  const storedNotes = localStorage.getItem('notes')
-  return storedNotes ? JSON.parse(storedNotes) : []
+  try {
+    const storedNotes = localStorage.getItem('notes')
+    return storedNotes ? JSON.parse(storedNotes) : []
+  } catch (error) {
+    console.log('Invalid data loaded from storage\n' + error.message)
+    console.log('Resetting data...')
+    return []
+  }
 }
 
 // create new note
