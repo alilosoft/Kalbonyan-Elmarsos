@@ -9,5 +9,6 @@ const createPuzzle = (wordCount, startGame, onError = console.log) => {
       onError(`Error: ${e.target.status} | ${e.target.responseText}`)
     }
   }
+  request.onerror = onError
   request.send()
 }
