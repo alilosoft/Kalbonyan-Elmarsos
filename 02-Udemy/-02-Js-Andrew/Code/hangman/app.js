@@ -19,18 +19,11 @@ window.addEventListener('keypress', (e) => {
 const wordCount = 2
 const maxAttempts = wordCount * 3
 
-const request = new XMLHttpRequest()
-request.open('GET', 'https://puzzle.mead.io/puzzle?wordCount=' + wordCount)
-request.onload = (e) => {
-  if (e.target.status === 200) {
-    const puzzle = JSON.parse(e.target.responseText).puzzle
-    game.start(puzzle, maxAttempts)
-    game.showPuzzle(displayPuzzle)
-    game.showResult(displayResult)
-    console.log(game)
-  } else {
-    console.log(`Error: ${e.target.status} | ${e.target.responseText}`)
-  }
+const startGame = (puzzleWord) => {
+  game.start(puzzleWord, maxAttempts)
+  game.showPuzzle(displayPuzzle)
+  game.showResult(displayResult)
+  console.log(game)
 }
 
-request.send()
+createPuzzle(wordCount, startGame, displayResult)
