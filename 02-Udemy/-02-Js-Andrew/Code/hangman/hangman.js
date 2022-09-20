@@ -6,7 +6,7 @@ class Hangman {
     this.attempts = maxAttempts
   }
 
-  showPuzzle(display = console.log) {
+  get puzzle() {
     let puzzle = ''
     this.word.forEach((letter) => {
       if (letter === ' ' || this.guess.includes(letter)) {
@@ -15,8 +15,11 @@ class Hangman {
         puzzle += '*'
       }
     })
-    display(puzzle)
     return puzzle
+  }
+
+  showPuzzle(display = console.log) {
+    display(this.puzzle)
   }
 
   makeGuess(letter) {
@@ -42,13 +45,17 @@ class Hangman {
     }
   }
 
-  showResult(display = console.log) {
+  get result() {
     if (this.status === 'playing') {
-      display(`Playing...🤔 (${this.attempts} attempts left)`)
+      return `Playing...🤔 (${this.attempts} attempts left)`
     } else if (this.status === 'finished') {
-      display('Congratulations 🎉')
+      return 'Congratulations 🎉'
     } else {
-      display(`Game Over 😭 (Mysterious word was: "${this.word.join('')}")`)
+      return `Game Over 😭 (the word was: "${this.word.join('')}")`
     }
+  }
+
+  showResult(display = console.log) {
+    display(this.result)
   }
 }

@@ -8,11 +8,13 @@ const game = new Hangman('alilo soft', 3)
 game.showPuzzle(displayPuzzle)
 game.showResult(displayResult)
 
+console.log(game.puzzle)
+console.log(game.result)
+
 window.addEventListener('keypress', (e) => {
   game.makeGuess(e.key)
   game.showPuzzle(displayPuzzle)
   game.showResult(displayResult)
-  // show in console
-  game.showPuzzle()
-  game.showResult()
+  console.log(game.puzzle)
+  console.log(game.result)
 })

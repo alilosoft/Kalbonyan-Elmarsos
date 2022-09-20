@@ -1,3 +1,35 @@
+class Person {
+  constructor(fullName, age, country, hobbies = []) {
+    this.firstName = fullName.split(' ')[0]
+    this.lastName = fullName.split(' ')[1]
+    this.age = age
+    this.country = country
+    this.hobbies = hobbies
+  }
+
+  showBio() {
+    let bio = `I'm ${this.firstName}, from ${this.country} & I'm ${this.age} years old.`
+
+    const hobbies = this.hobbies.join(', ')
+    if (hobbies.length > 0) {
+      bio += ` I like ${hobbies}.`
+    }
+    console.log(bio)
+  }
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`
+  }
+
+  set fullName(newName) {
+    this.firstName = newName.split(' ')[0]
+    this.lastName = newName.split(' ')[1]
+  }
+}
+
+const me = new Person('Alilo Fellahi', 39, 'Algeria', ['Walking', 'Tech geek'])
+me.showBio()
+console.log(me)
 class Employee extends Person {
   constructor(name, age, country, job, salary, hobbies = []) {
     super(name, age, country, hobbies)
@@ -6,7 +38,7 @@ class Employee extends Person {
   }
 
   showBio(display = console.log) {
-    display(`I'm ${this.name}, a ${this.job} from ${this.country}.`)
+    display(`I'm ${this.fullName}, a ${this.job} from ${this.country}.`)
   }
 
   raiseSalary(raise) {
@@ -14,12 +46,10 @@ class Employee extends Person {
   }
 }
 
-const emp = new Employee('Ali', 38, 'Algeria', 'Web Dev', 5000)
+const emp = new Employee('Ali FELLAHI', 39, 'Algeria', 'Web Dev', 5000)
 emp.showBio()
 console.log(emp)
-
 emp.raiseSalary(500)
-console.log(emp)
 
 class Student extends Person {
   constructor(name, age, country, grade, hobbies = []) {
@@ -29,18 +59,18 @@ class Student extends Person {
 
   showBio(display = console.log) {
     display(
-      `The student ${this.name} is ${
+      `The student ${this.firstName} is ${
         this.grade >= 70 ? 'passing' : 'failing'
       } the class.`
     )
   }
 
-  updateGrade(grade) {
-    this.grade += grade
+  updateGrade(change) {
+    this.grade += change
   }
 }
 
-const chya = new Student('Aicha', 6, 'Algeria', 90)
+const chya = new Student('Aicha Fellahi', 6, 'Algeria', 90)
 chya.showBio()
 console.log(chya)
 
