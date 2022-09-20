@@ -1,9 +1,16 @@
 class Hangman {
-  constructor(word, maxAttempts) {
+  constructor() {
     this.status = 'playing'
-    this.word = word.toLowerCase().split('')
     this.guess = []
+  }
+
+  start(word, maxAttempts = 3) {
+    this.word = word.toLowerCase().split('')
     this.attempts = maxAttempts
+  }
+
+  get puzzleWord() {
+    return this.word.join('')
   }
 
   get puzzle() {
@@ -51,7 +58,7 @@ class Hangman {
     } else if (this.status === 'finished') {
       return 'Congratulations 🎉'
     } else {
-      return `Game Over 😭 (the word was: "${this.word.join('')}")`
+      return `Game Over 😭 (the word was: "${this.puzzleWord}")`
     }
   }
 
