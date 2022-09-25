@@ -1,9 +1,9 @@
 # AWS Certified Cloud Practitioner (CLF-C01)
 
-![Certificate](a%20cloud%20guru-certificate-AWS-CCP.png)
+![Certificate](ACG_Certificate-A61C429A0B87.png)
 [**_Verify Link_**](https://verify.acloud.guru/A61C429A0B87)
 
-# 01 — ABOUT THE COURSE
+# About the course
 
 The cloud has become a key enabler for innovation with beneficial features like high availability, unlimited capacity, on-demand scalability, elasticity, cost savings, and more! Many companies realize the ever-evolving Amazon Web Services (AWS) cloud computing platform offers a wide selection of services that drive innovation, enable scalability, and maximize IT spend.
 
