@@ -42,7 +42,7 @@ const createPuzzle = (wordCount) =>
       if (response.status === 200) {
         return response.json()
       } else {
-        throw Error('Unable to fetch a puzzle')
+        throw new Error('Unable to fetch a puzzle')
       }
     })
     .then((json) => json.puzzle)

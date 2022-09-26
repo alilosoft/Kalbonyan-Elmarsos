@@ -22,7 +22,7 @@ const getCountryCallbacks = (
   request.send()
 }
 
-getCountryCallbacks('algeria', console.log)
+// getCountryCallbacks('algeria', console.log)
 
 const getCountryPromise = (countryName) =>
   new Promise((resolve, reject) => {
@@ -46,16 +46,16 @@ const getCountryPromise = (countryName) =>
     request.send()
   })
 
-getCountryPromise('egypt').then(console.log).catch(console.error)
+// getCountryPromise('egypt').then(console.log).catch(console.error)
 
-const getCountry = (countryName) =>
-  fetch(`https://restcountries.com/v3.1/name/${countryName}`)
+const getCountry = (countryCode) =>
+  fetch(`https://restcountries.com/v3.1/alpha/${countryCode}`)
     .then((response) => {
       if (response.ok) {
         return response.json()
       } else {
-        throw Error(
-          `Can not get country with name "${countryName}"\nStatus: ${response.status} | ${response.statusText}`
+        throw new Error(
+          `Unable to get country with code "${countryCode}"\nStatus: ${response.status} | ${response.statusText}`
         )
       }
     })
@@ -64,12 +64,41 @@ const getCountry = (countryName) =>
 const showCountryFlag = (name) =>
   getCountry(name)
     .then((country) => {
-      console.log(country)
+      // console.log(country)
       const flagEl = document.createElement('img')
+      flagEl.width = 300
+      flagEl.style.margin = '8px'
+      flagEl.style.border = '1px solid'
       flagEl.src = country.flags.svg
       document.body.appendChild(flagEl)
     })
     .catch(console.error)
 
-const countries = ['algeria', 'egypt', 'ksa', 'tunisia', 'morocco', 'libya']
-countries.map(showCountryFlag)
+const countries = ['dz', 'egy', 'ksa']
+countries.forEach(showCountryFlag)
+
+const getIPInfo = (token = 'a4b7b3cefd793a') =>
+  fetch(`https://ipinfo.io/json?token=${token}`).then((response) => {
+    if (response.ok) {
+      return response.json()
+    } else {
+      throw new Error(`Status ${response.status} | ${response.statusText}`)
+    }
+  })
+
+// get ip info then show country flag
+getIPInfo()
+  .then((info) => {
+    return info.country
+  })
+  .then(showCountryFlag)
+  .catch(console.error)
+
+// using async/await
+const showIP = async () => {
+  const info = await getIPInfo()
+  console.log(`async/await: ${info.ip}`)
+  return info
+}
+
+console.log(showIP())
