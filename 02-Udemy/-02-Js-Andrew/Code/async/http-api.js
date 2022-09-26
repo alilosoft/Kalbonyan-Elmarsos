@@ -1,4 +1,8 @@
-const fetchCountryInfo = (countryName, onSuccess, onError = console.log) => {
+const getCountryCallbacks = (
+  countryName,
+  onSuccess,
+  onError = console.error
+) => {
   const url = 'https://restcountries.com/v2/all'
   const request = new XMLHttpRequest()
   request.open('GET', url)
@@ -18,9 +22,9 @@ const fetchCountryInfo = (countryName, onSuccess, onError = console.log) => {
   request.send()
 }
 
-fetchCountryInfo('algeria', console.log)
+getCountryCallbacks('algeria', console.log)
 
-const fetchCountryInfoPromise = (countryName) =>
+const getCountryPromise = (countryName) =>
   new Promise((resolve, reject) => {
     const url = 'https://restcountries.com/v2/all'
     const request = new XMLHttpRequest()
@@ -34,7 +38,7 @@ const fetchCountryInfoPromise = (countryName) =>
         resolve(myCountry)
       } else {
         reject(
-          `Error📛: ${e.target.status} | ${e.target.statusText} | ${e.target.responseText}`
+          `📛Error: ${e.target.status} | ${e.target.statusText} | ${e.target.responseText}`
         )
       }
     }
@@ -42,4 +46,30 @@ const fetchCountryInfoPromise = (countryName) =>
     request.send()
   })
 
-fetchCountryInfoPromise('egypt').then(console.log).catch(console.error)
+getCountryPromise('egypt').then(console.log).catch(console.error)
+
+const getCountry = (countryName) =>
+  fetch(`https://restcountries.com/v3.1/name/${countryName}`)
+    .then((response) => {
+      if (response.ok) {
+        return response.json()
+      } else {
+        throw Error(
+          `Can not get country with name "${countryName}"\nStatus: ${response.status} | ${response.statusText}`
+        )
+      }
+    })
+    .then((json) => json[0])
+
+const showCountryFlag = (name) =>
+  getCountry(name)
+    .then((country) => {
+      console.log(country)
+      const flagEl = document.createElement('img')
+      flagEl.src = country.flags.svg
+      document.body.appendChild(flagEl)
+    })
+    .catch(console.error)
+
+const countries = ['algeria', 'egypt', 'ksa', 'tunisia', 'morocco', 'libya']
+countries.map(showCountryFlag)
