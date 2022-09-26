@@ -1,5 +1,9 @@
 // with callbacks
-const createPuzzleV1 = (wordCount, startGame, onError = console.log) => {
+const createPuzzleWithCallbacks = (
+  wordCount,
+  startGame,
+  onError = console.log
+) => {
   const request = new XMLHttpRequest()
   request.open('GET', 'https://puzzle.mead.io/puzzle?wordCount=' + wordCount)
   request.onload = (e) => {
@@ -15,7 +19,7 @@ const createPuzzleV1 = (wordCount, startGame, onError = console.log) => {
 }
 
 // with promise
-const createPuzzleV2 = (wordCount) =>
+const createPuzzleWithPromise = (wordCount) =>
   new Promise((resolve, reject) => {
     const request = new XMLHttpRequest()
     request.open('GET', 'https://puzzle.mead.io/puzzle?wordCount=' + wordCount)
@@ -31,4 +35,18 @@ const createPuzzleV2 = (wordCount) =>
     request.send()
   })
 
-createPuzzleV2(5).then(console.log, console.error)
+// with fetch api
+const createPuzzle = (wordCount) =>
+  fetch(`https://puzzle.mead.io/puzzle?wordCount=${wordCount}`, {})
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json()
+      } else {
+        throw Error('Unable to fetch a puzzle')
+      }
+    })
+    .then((json) => json.puzzle)
+
+createPuzzle(5)
+  .then((puzzle) => console.log(`Puzzle: ${puzzle.toLowerCase()}`))
+  .catch((err) => console.error(`📛Error: ${err}`))

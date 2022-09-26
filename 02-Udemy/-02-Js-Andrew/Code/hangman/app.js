@@ -26,4 +26,4 @@ const startGame = (puzzleWord) => {
   console.log(game)
 }
 
-createPuzzleV2(wordCount).then(startGame).catch(displayResult)
+createPuzzle(wordCount).then(startGame).catch(displayResult)
