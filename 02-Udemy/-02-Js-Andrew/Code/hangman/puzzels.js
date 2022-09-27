@@ -47,6 +47,26 @@ const createPuzzle = (wordCount) =>
     })
     .then((json) => json.puzzle)
 
-createPuzzle(5)
-  .then((puzzle) => console.log(`Puzzle: ${puzzle.toLowerCase()}`))
+// createPuzzle(5)
+//   .then((puzzle) => console.log(`Puzzle: ${puzzle.toLowerCase()}`))
+//   .catch((err) => console.error(`📛Error: ${err}`))
+
+// fetch using async/await
+const createPuzzleAsync = async (wordCount) => {
+  const response = await fetch(
+    `https://puzzle.mead.io/puzzle?wordCount=${wordCount}`,
+    {}
+  )
+  if (response.ok) {
+    const json = await response.json()
+    return json.puzzle
+  } else {
+    throw new Error(
+      `Unable to fetch a puzzle\nStatus: ${response.status} | ${response.statusText}`
+    )
+  }
+}
+
+createPuzzleAsync(3)
+  .then((puzzle) => console.log(`Puzzle(async/await): ${puzzle.toLowerCase()}`))
   .catch((err) => console.error(`📛Error: ${err}`))

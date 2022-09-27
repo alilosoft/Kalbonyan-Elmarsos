@@ -4,26 +4,40 @@ const displayPuzzle = (puzzle) =>
 const displayResult = (result) =>
   (document.querySelector('#result').textContent = result)
 
-const game = new Hangman()
+const showError = (error) =>
+  (document.querySelector('#error').textContent = error)
+
+let hangman
+
+const render = (game = hangman) => {
+  game.showPuzzle(displayPuzzle)
+  game.showResult(displayResult)
+}
 
 // play
 window.addEventListener('keypress', (e) => {
-  game.makeGuess(e.key)
-  game.showPuzzle(displayPuzzle)
-  game.showResult(displayResult)
-  console.log(game.puzzle)
-  console.log(game.result)
+  hangman.makeGuess(e.key)
+  render()
+  console.log(hangman.result)
 })
 
-// start
-const wordCount = 2
-const maxAttempts = wordCount * 3
-
-const startGame = (puzzleWord) => {
-  game.start(puzzleWord, maxAttempts)
-  game.showPuzzle(displayPuzzle)
-  game.showResult(displayResult)
-  console.log(game)
+const config = {
+  wordCount: 2,
+  get maxAttempts() {
+    return this.wordCount * 3
+  },
 }
 
-createPuzzle(wordCount).then(startGame).catch(displayResult)
+// start
+const startGame = async () => {
+  console.log('Starting new game...')
+  const puzzle = await createPuzzleAsync(config.wordCount)
+  hangman = new Hangman()
+  hangman.start(puzzle, config.maxAttempts)
+  render()
+  console.log(hangman)
+}
+
+document.querySelector('#reset').onclick = startGame
+
+startGame().catch(showError)
