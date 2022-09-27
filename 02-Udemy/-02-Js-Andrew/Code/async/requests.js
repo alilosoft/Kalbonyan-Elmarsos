@@ -91,7 +91,7 @@ const showCountryFlag = (name) =>
     })
     .catch(console.error)
 
-const countries = ['dz', 'egy', 'ksa']
+const countries = ['dz', 'egy', 'ksa', 'irq']
 countries.forEach(showCountryFlag)
 
 const getIPInfo = (token = 'a4b7b3cefd793a') =>

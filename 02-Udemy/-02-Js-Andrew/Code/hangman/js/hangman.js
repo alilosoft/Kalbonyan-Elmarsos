@@ -54,7 +54,7 @@ class Hangman {
 
   get result() {
     if (this.status === 'playing') {
-      return `Playing...🤔 (${this.attempts} attempts left)`
+      return `Type your guess...🤔 (${this.attempts} attempts left)`
     } else if (this.status === 'finished') {
       return 'Congratulations 🎉'
     } else {

@@ -1,17 +1,19 @@
-const displayPuzzle = (puzzle) =>
-  (document.querySelector('#puzzle').textContent = puzzle)
-
-const displayResult = (result) =>
-  (document.querySelector('#result').textContent = result)
-
 const showError = (error) =>
   (document.querySelector('#error').textContent = error)
 
 let hangman
 
+const puzzleEl = document.querySelector('#puzzle')
+const resultEl = document.querySelector('#result')
+
 const render = (game = hangman) => {
-  game.showPuzzle(displayPuzzle)
-  game.showResult(displayResult)
+  puzzleEl.innerHTML = ''
+  game.puzzle.split('').forEach((letter) => {
+    const letterEl = document.createElement('span')
+    letterEl.textContent = letter
+    puzzleEl.appendChild(letterEl)
+  })
+  resultEl.textContent = game.result
 }
 
 // play
