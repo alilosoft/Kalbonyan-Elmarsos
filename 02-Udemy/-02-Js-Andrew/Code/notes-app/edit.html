@@ -11,43 +11,42 @@
       dayjs.extend(dayjs_plugin_relativeTime)
     </script>
 
-    <script src="functions.js"></script>
-    <script defer src="edit.js"></script>
+    <script src="js/functions.js"></script>
+    <script defer src="js/edit.js"></script>
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: sans-serif;
-      }
-
-      .container {
-        margin: 8rem auto;
-        padding: 24px;
-        width: 80%;
-        border-radius: 16px;
-        box-shadow: 0 8px 24px #0005;
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
     <title>Edit Note</title>
   </head>
   <body>
+    <header class="header">
+      <div class="container">
+        <h1 class="header__title">My Notes</h1>
+        <h2 class="header__subtitle">Never loss your ideas 💡</h2>
+      </div>
+    </header>
+
+    <div class="actions">
+      <div class="actions__container actions__container--spaced">
+        <a href="index.html">Home</a>
+        <p id="last-update"></p>
+      </div>
+    </div>
     <div class="container">
-      <h2>Editing Note</h2>
-      <p id="last-update"></p>
-      <div>
-        <label for="note-title">Title:</label>
-        <input type="text" id="note-title" placeholder="Note title" />
-      </div>
-      <div>
-        <label for="note-body">More details &darr;</label><br />
-        <textarea id="note-body" cols="50" rows="10"></textarea>
-      </div>
-      <button id="save-btn">Save</button>
+      <input
+        type="text"
+        id="note-title"
+        class="title-input"
+        placeholder="Note title" />
+      <textarea
+        id="note-body"
+        class="body-input"
+        cols="50"
+        rows="10"></textarea>
+    </div>
+    <div class="actions__container actions__container--spaced">
+      <button id="save-btn" class="button">Save</button>
+      <button id="delete-btn" class="button button--secondary">Delete</button>
     </div>
   </body>
 </html>

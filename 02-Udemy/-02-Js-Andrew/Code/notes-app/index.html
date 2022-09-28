@@ -19,38 +19,38 @@
 
     <!-- app scripts -->
     <script src="../common/ion-icons.js"></script>
-    <script src="functions.js"></script>
-    <script defer src="notes-app.js"></script>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: sans-serif;
-      }
-
-      .container {
-        margin: 8rem auto;
-        padding: 24px;
-        width: 80%;
-        border-radius: 16px;
-        box-shadow: 0 8px 24px #0005;
-      }
-    </style>
+    <script src="js/functions.js"></script>
+    <script defer src="js/notes-app.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
     <title>My Notes</title>
   </head>
   <body>
-    <h1>My Notes</h1>
-    <h2>Never loss your ideas 💡</h2>
-    <input id="search-txt" type="text" placeholder="Filter notes" />
-    <select id="sort-notes">
-      <option value="edited">Sort by last edited</option>
-      <option value="created">Sort by recently created</option>
-      <option value="alphabetic">Sort alphabetically</option>
-    </select>
-    <ul id="notes-list"></ul>
-    <button id="btn-add-note">Add New Note</button>
+    <header class="header">
+      <div class="container">
+        <h1 class="header__title">My Notes</h1>
+        <h2 class="header__subtitle">Never loss your ideas 💡</h2>
+      </div>
+    </header>
+
+    <div class="actions">
+      <div class="actions__container">
+        <input
+          id="search-txt"
+          class="input"
+          type="text"
+          placeholder="Filter notes" />
+        <select id="sort-notes" class="dropdown">
+          <option value="edited">Sort by last edited</option>
+          <option value="created">Sort by recently created</option>
+          <option value="alphabetic">Sort alphabetically</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="container">
+      <ul id="notes-list"></ul>
+      <button id="btn-add-note" class="button">Add Note</button>
+    </div>
   </body>
 </html>

@@ -27,6 +27,14 @@ if (!note) {
     storeNotes()
     location.assign('index.html')
   })
+
+  document.querySelector('#delete-btn').addEventListener('click', (e) => {
+    if (confirm('Sure?')) {
+      deleteNote(note.id)
+      storeNotes()
+      location.assign('index.html')
+    }
+  })
 }
 
 window.addEventListener('storage', (e) => {
