@@ -6,18 +6,18 @@ TODO: #18 finish the course: The Modern JavaScript Bootcamp
 
 ### Todo app
 
-- [Project-code](./Projects/Todo-app)
-- [Live Demo]()
+- [Project-code](./Projects/todos-app/)
+- [Live Demo](https://alilo-todos-app.vercel.app/)
 
 ### Notes app
 
-- [Project-code](./Projects/Notes-app)
-- [Live Demo]()
+- [Project-code](./Projects/notes-app/)
+- [Live Demo](https://alilo-notes-app.vercel.app/)
 
 ### Hangman-Game
 
-- [Project-code](./Projects/Hangman-Game)
-- [Live Demo]()
+- [Project-code](./Projects/hangman/)
+- [Live Demo](hangmane-game.surge.sh)
 
 ---
 
