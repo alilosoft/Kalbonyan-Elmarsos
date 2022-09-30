@@ -17,7 +17,7 @@ TODO: #18 finish the course: The Modern JavaScript Bootcamp
 ### Hangman-Game
 
 - [Project-code](./Projects/hangman/)
-- [Live Demo](hangmane-game.surge.sh)
+- [Live Demo](https://hangmane-game.surge.sh)
 
 ---
 
