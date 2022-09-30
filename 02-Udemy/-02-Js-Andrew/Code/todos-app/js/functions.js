@@ -25,7 +25,7 @@ const showTodos = (todos = filterTodos(myTodos)) => {
   const todosList = document.querySelector('ol')
   todosList.innerHTML = ''
   todos.forEach((todo) => todosList.appendChild(createTodoEl(todo)))
-  showSummary(todos)
+  getSummary(todos)
 }
 
 // delete a todo by id
@@ -79,9 +79,10 @@ const createTodoEl = (todo) => {
 }
 
 // show summary
-const showSummary = (todos = filterTodos(myTodos)) => {
+const getSummary = (todos = filterTodos(myTodos)) => {
   const count = todos.filter((todo) => !todo.completed).length
-  document.querySelector(
-    '#summary-txt'
-  ).textContent = `You have ${count} todos left`
+  const summaryEl = document.querySelector('#summary-txt')
+  summaryEl.classList.add('list-title')
+  const plural = count > 1 ? 's' : ''
+  summaryEl.textContent = `You have ${count} todo${plural} left`
 }
