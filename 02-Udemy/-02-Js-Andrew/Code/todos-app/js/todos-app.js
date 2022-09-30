@@ -13,14 +13,16 @@ const myFilters = {
 document.querySelector('#new-todo-form').addEventListener('submit', (e) => {
   e.preventDefault()
   const input = e.target.elements.todoText
-  myTodos.push({
-    id: uuidv4(),
-    text: input.value,
-    completed: false,
-  })
-  input.value = ''
-  storeTodos(myTodos)
-  showTodos(filterTodos(myTodos))
+  if (input.value.trim().length > 0) {
+    myTodos.push({
+      id: uuidv4(),
+      text: input.value.trim(),
+      completed: false,
+    })
+    input.value = ''
+    storeTodos(myTodos)
+    showTodos(filterTodos(myTodos))
+  }
 })
 
 // search todo

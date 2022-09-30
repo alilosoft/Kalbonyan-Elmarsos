@@ -35,8 +35,10 @@ const deleteTodo = (id, todos = myTodos) => {
 }
 
 const createTodoEl = (todo) => {
-  const todoEl = document.createElement('li')
-  // checkbox setup
+  const todoEl = document.createElement('label')
+  todoEl.classList.add('list-item')
+
+  // setup todo checkbox
   const checkBox = document.createElement('input')
   checkBox.setAttribute('type', 'checkbox')
   checkBox.checked = todo.completed
@@ -45,22 +47,31 @@ const createTodoEl = (todo) => {
     storeTodos()
     showTodos()
   })
-  todoEl.appendChild(checkBox)
-  // text setup
+
+  // setup text span
   const todoText = document.createElement('span')
   if (todo.text.length) {
     todoText.textContent = `${todo.text}`
   } else {
     todoText.textContent = `${todo.id}`
   }
-  todoEl.appendChild(todoText)
-  // delete btn setup
+
+  // setup container for checkbox & text el
+  const containerEl = document.createElement('div')
+  containerEl.classList.add('list-item__container')
+  containerEl.appendChild(checkBox)
+  containerEl.appendChild(todoText)
+  todoEl.appendChild(containerEl)
+
+  // setup delete btn
   const deleteBtn = document.createElement('button')
   deleteBtn.appendChild(createIonIcon('trash'))
   deleteBtn.onclick = (e) => {
-    deleteTodo(todo.id) // should be responsible only for deletion
-    storeTodos() // store & show are called here after delete and not inside delete for separation of concerns
-    showTodos()
+    if (confirm('Are you sure?')) {
+      deleteTodo(todo.id) // should be responsible only for deletion
+      storeTodos() // store & show are called here after delete and not inside delete for separation of concerns
+      showTodos()
+    }
   }
   todoEl.appendChild(deleteBtn)
 

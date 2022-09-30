@@ -17,44 +17,46 @@
     <script src="../common/uuidv4.js"></script>
 
     <!-- app scripts -->
-    <script defer src="functions.js"></script>
-    <script defer src="todos-app.js"></script>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    <script defer src="js/functions.js"></script>
+    <script defer src="js/todos-app.js"></script>
 
-      body {
-        font-family: sans-serif;
-      }
-
-      .container {
-        margin: 8rem auto;
-        padding: 24px;
-        width: 80%;
-        border-radius: 16px;
-        box-shadow: 0 8px 24px #0005;
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/favicon.png" />
     <title>My TODOs</title>
   </head>
   <body>
-    <h1>Tasks TODO:</h1>
-    <h2 id="summary-txt"></h2>
-    <input id="todos-search" type="text" placeholder="Search for a todo" />
-    <div>
-      <input type="checkbox" id="hide-completed" />
-      <label for="hide-completed"> Hide completed todos </label>
+    <header class="header">
+      <div class="container">
+        <h1 class="header__title">I CAN DO IT!</h1>
+        <h2 class="header__subtitle">Sure you can 💪</h2>
+      </div>
+    </header>
+
+    <div class="actions">
+      <div class="actions__container">
+        <input
+          id="todos-search"
+          class="input"
+          type="text"
+          placeholder="Search for a todo" />
+        <label class="checkbox" for="hide-completed">
+          <input type="checkbox" id="hide-completed" />
+          Hide completed todos
+        </label>
+      </div>
     </div>
-    <ol id="todos-list"></ol>
-    <form id="new-todo-form">
-      <input
-        name="todoText"
-        type="text"
-        placeholder="What do you want to do?" />
-      <button>Add New TODO</button>
-    </form>
+
+    <div class="container">
+      <h2 id="summary-txt"></h2>
+      <ol id="todos-list"></ol>
+      <form id="new-todo-form">
+        <input
+          class="input"
+          name="todoText"
+          type="text"
+          placeholder="What do you want to do?" />
+        <button class="button">Add New TODO</button>
+      </form>
+    </div>
   </body>
 </html>
