@@ -93,6 +93,7 @@ const createNoteEl = (note) => {
 const createDeleteButton = (note) => {
   // delete button
   const deleteBtn = document.createElement('button')
+  deleteBtn.classList.add('delete-btn')
   deleteBtn.appendChild(createIonIcon('trash'))
   deleteBtn.onclick = function (e) {
     deleteNote(note.id)

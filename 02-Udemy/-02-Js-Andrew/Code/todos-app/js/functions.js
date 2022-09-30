@@ -24,7 +24,14 @@ const filterTodos = (todos, filters = myFilters) =>
 const showTodos = (todos = filterTodos(myTodos)) => {
   const todosList = document.querySelector('ol')
   todosList.innerHTML = ''
-  todos.forEach((todo) => todosList.appendChild(createTodoEl(todo)))
+  if (todos.length > 0) {
+    todos.forEach((todo) => todosList.appendChild(createTodoEl(todo)))
+  } else {
+    const emptyEl = document.createElement('p')
+    emptyEl.classList.add('empty-message')
+    emptyEl.textContent = 'No todos to show :('
+    todosList.appendChild(emptyEl)
+  }
   getSummary(todos)
 }
 
@@ -65,6 +72,7 @@ const createTodoEl = (todo) => {
 
   // setup delete btn
   const deleteBtn = document.createElement('button')
+  deleteBtn.classList.add('delete-btn')
   deleteBtn.appendChild(createIonIcon('trash'))
   deleteBtn.onclick = (e) => {
     if (confirm('Are you sure?')) {

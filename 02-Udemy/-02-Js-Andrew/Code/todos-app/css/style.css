@@ -223,3 +223,10 @@ a {
 .empty-message {
   margin: 3.2rem 0;
 }
+
+.delete-btn {
+  border-style: none;
+  background: none;
+  color: red;
+  font-size: 2rem;
+}
