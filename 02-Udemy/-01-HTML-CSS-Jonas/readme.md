@@ -36,7 +36,7 @@
 
 ## **Final Project:** (_Omnifood_)
 
-- [Project-code](./Projects/Omnifood) <br>
+- [Project-code](./Projects/omnifood)
 - [Live Demo](https://omnifood.alilo.dev/)
 
 ---
