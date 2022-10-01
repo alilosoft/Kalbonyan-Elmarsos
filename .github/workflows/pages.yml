@@ -33,8 +33,8 @@ jobs:
       - run: mkdir public
       - name: Copy all static projects to public dir
         run: echo '<h1>Github actions & pages are awesome 😎</h1>' > ./public/index.html
-      - run: cp -r ./02-Udemy/-01-HTML-CSS-Jonas/Projects/ ./public
-      - run: cp -r ./02-Udemy/-02-Js-Andrew/Projects/ ./public
+      - run: cp -r ./02-Udemy/-01-HTML-CSS-Jonas/Projects/* ./public
+      - run: cp -r ./02-Udemy/-02-Js-Andrew/Projects/* ./public
       - run: ls -a ./public
       # add a step to generate an index.html page for all hosted projects
       - name: Setup Pages
