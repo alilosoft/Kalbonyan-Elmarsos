@@ -32,8 +32,9 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v2
+      - run: mkdir public
       - name: Copy all static projects to temp dir
-      - run: echo '<!DOCTYPE html><html><body><h1>Github actions & pages are awesome 😎</h1></body></html>' > ./public/index.html
+        run: echo '<!DOCTYPE html><html><body><h1>Github actions & pages are awesome 😎</h1></body></html>' > ./public/index.html
       - run: echo '********* HELLO **********'
       - run: ls -a
       - name: Upload artifact to github pages
