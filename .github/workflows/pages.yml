@@ -4,7 +4,7 @@ name: Deploy static projects to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: ['main']
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -17,7 +17,7 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: true
 
 jobs:
@@ -35,7 +35,12 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload entire repository
+          # Upload omnifood project / Jonas course
+          path: './02-Udemy/-01-HTML-CSS-Jonas/Projects'
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload projects of JS course by andrew
           path: './02-Udemy/-02-Js-Andrew/Projects'
       - name: Deploy to GitHub Pages
         id: deployment
