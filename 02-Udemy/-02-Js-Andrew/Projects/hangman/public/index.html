@@ -4,11 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intro to Babel</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/favicon.png" />
+    <title>Hangman Game</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <p>This web site is built with 💛, Babel & Webpack</p>
+    <div>
+      <h1 class="heading">Hangman</h1>
+      <div id="puzzle" class="puzzle"></div>
+      <p id="result"></p>
+      <p id="error"></p>
+      <button id="reset" class="btn">Restart</button>
+    </div>
     <script src="/scripts/bundle.js"></script>
   </body>
 </html>
